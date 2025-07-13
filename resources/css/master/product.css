@@ -1,0 +1,378 @@
+.flex-row> label::before {
+    display: inline-block;
+    content: '';
+    box-sizing: border-box;
+    z-index: 1;
+    border-radius: 20px;
+    background-color: var(--spanish-blue);
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+}
+
+.flex-row:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: column;
+    padding: 0em 0em 0em 10px;
+    clear: both;
+}
+
+.label_for {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.row-input {
+    width: 250px;
+}
+
+.row-content {
+    display: flex;
+    gap: 45px;
+    padding-bottom: 15px;
+}
+.row-group-content {
+    display: flex;
+    gap: 18px;
+    padding-bottom: 15px;
+}
+
+.search-group {
+    display: flex;
+    gap: 15px;
+}
+
+.parent {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.parent div:nth-child(3) {
+    position: absolute;
+    right: 45px;
+    font-weight: bold;
+}
+
+.tableBasic tr > th,
+.tableBasic tr > td {
+    border-right: #cccccc solid 1px;
+}
+
+.row-field {
+    display: flex;
+    border: 1px solid black;
+    border-bottom: 0;
+    padding-left: 5px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    border-right: 1px solid black;
+}
+
+.input-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+.required-label {
+    border: 1px transparent;
+    padding: 1px 15px;
+    background-color: #ed7d32;
+    color: white;
+}
+
+.input-label {
+    font-weight: 600;
+}
+
+.flex-gap-8 {
+    display: flex;
+    gap: 8px;
+}
+
+.row-input-short {
+    width: 175px;
+}
+
+.row-input-mid {
+    width: 250px;
+}
+
+.row-input-long {
+    width: 407px;
+}
+
+.container-radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+/* On mouse-over, add a grey background color */
+.container-radio:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-radio input:checked ~ .checkmark {
+    background-color: white;
+    border: 1px solid gray
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-radio input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-radio .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: gray;
+}
+
+.flex-radio {
+    display: flex;
+    gap: 25px
+}
+
+.short-search {
+    width: 120px;
+}
+
+/* The container checkbox */
+.container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover input ~ .checkmark-checkbox {
+    background-color: #d4d2d2;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked ~ .checkmark-checkbox {
+    background-color: #b0b0b0;
+}
+
+/* Create the checkmark-checkbox/indicator (hidden when not checked) */
+.checkmark-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark-checkbox when checked */
+.container-checkbox input:checked ~ .checkmark-checkbox:after {
+    display: block;
+}
+
+/* Style the checkmark-checkbox/indicator */
+.container-checkbox .checkmark-checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.input-row-checkbox {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+}
+
+.last-row-field {
+    border-bottom: 1px solid black;
+}
+
+.parent-create {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+.parent-create div:nth-child(1) {
+    position: absolute;
+    font-weight: bold;
+    left: 20px;
+}
+
+.parent-create div:nth-child(5) {
+    position: absolute;
+    right: 200px;
+    font-weight: bold;
+}
+.parent-create div:nth-child(6) {
+    position: absolute;
+    right: 20px;
+    font-weight: bold;
+}
+
+.buttonCreate {
+    width: 175px!important;
+}
+
+.btn-delete {
+    background-color: #c55a11!important;
+    color: white!important;
+}
+
+.btn-delete:hover {
+    background-color: #b56935!important;
+}
+
+.btn-copy {
+    background-color: #7d87b1!important;
+    color: white!important;
+}
+
+.btn-copy:hover {
+    background-color: #9da0ac!important;
+}
+
+.btn-save, .btn_print {
+    background-color: #06b050!important;
+    color: white!important;
+}
+
+.btn-save:hover {
+    background-color: #28a65f!important;
+}
+
+.error_msg {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.isNew {
+    visibility: hidden;
+}
+
+.btnExport {
+    width: 250px!important;
+    background-color: green!important;
+    color: white!important;
+}
+
+.mr-0 > label::before {
+    display: inline-block;
+    content: '';
+    box-sizing: border-box;
+    z-index: 1;
+    border-radius: 20px;
+    background-color: var(--spanish-blue);
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+}
+
+.button-product, .btn_print {
+    display: inline-block;
+    box-sizing: border-box;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    padding: 1em 0.65em 1em 0.75em;
+    letter-spacing: 0.1em;
+    border: #aaaaaa solid 1px;
+    border-radius: 6px;
+    line-height: 1.3;
+}
+
+.button-modal {
+    color: #ffffff;
+    background-color: var(--btn-basic);
+    border: #0077c7 solid 1px;
+}
+
+.dis-none {
+    display: none;
+}

@@ -1,0 +1,211 @@
+.content-modal {
+    width: 60%!important;
+}
+.sequence-modal {
+    width: 92%!important;
+}
+#processSettingModal .modal__content {
+    width: 720px !important;
+}
+
+.inner-modal {
+    padding: 0;
+    margin: 30px auto;
+    width: 95%!important;
+}
+
+.content-box {
+    border: 1px gray solid;
+    padding-bottom: 15px;
+}
+
+.table-modal {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-modal .modal-tr:nth-child(even){background-color: #f2f2f2;}
+
+.modal-th {
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #9c9c9c;
+    padding: 8px;
+}
+
+.modal-td {
+    font-size: 18px;
+    border: 1px solid #9c9c9c;
+}
+
+.table-head {
+    background-color: #d9d9d9;
+}
+
+.button-table {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+}
+
+.div-button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.edit-button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn {
+    color: white;
+    border-radius: 7px;
+    border: 1px solid transparent;
+}
+
+.edit-btn, .process-modal-btn {
+    background: #362778;
+}
+
+.delete-btn {
+    background: #c55a11;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.p-right-5 {
+    padding-right: 5px;
+}
+
+.save-btn, .save-btn-process, .save-btn-setting {
+    background: #71ad47;
+}
+
+.update-btn, .update-btn-process, .update-btn-setting {
+    background: #71ad47;
+}
+
+.cancel-btn, .cancel-btn-process, .cancel-btn-setting {
+    background: #7d87b1;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 72px;
+}
+
+.clear-btn, .clear-btn-process, .clear-btn-setting {
+    background: #7d87b1;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 72px;
+}
+
+.span_for {
+    font-size: 18px;
+}
+
+.label_for {
+    font-size: 18px;
+}
+
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-del-save {
+    padding: 5px;
+    padding-right: 40px;
+    padding-left: 40px;
+    width: 200px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+}
+
+
+.btn-del, .btn-del-process, .btn-del-setting {
+    background: #c55a11;
+}
+
+
+.btn-done, .btn-done-process, .btn-done-setting {
+    background: #06b050;
+}
+
+.button-order {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    background: #362778;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.span-number, .span-process-order {
+    padding: 20px;
+}
+
+.magnify-btn {
+    background-color: var(--st-patrick-blue);
+    border: none;
+    color: var(--white);
+    border-radius: 6px;
+    width: 60px;
+    height: 37px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+}
+
+.magnify-btn img {
+    width: 24px !important;
+    padding-top: 0 !important;
+}
+
+.div-calendar {
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+    gap: 4px;
+    align-items: center;
+}
+
+.div-calendar-setting {
+    display: flex;
+    margin-left: 5px;
+    margin-right: 5px;
+    gap: 4px;
+    align-items: center;
+}
+
+.conf-label-row {
+    width: 30%;
+}
+button {
+    cursor: pointer;
+}
+input:disabled {
+    color: black
+}

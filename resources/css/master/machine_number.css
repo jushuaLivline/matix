@@ -1,0 +1,54 @@
+.row-group-input {
+    display: flex;
+    gap: 10px;
+}
+
+.m-input {
+    width: 60px;
+}
+
+.b-input {
+    width: 40px;
+}
+
+.row-mn-content {
+    display: flex;
+    gap: 70px;
+    padding-bottom: 15px;
+}
+
+.search-mn-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-mid {
+    width: 220px;
+}
+
+.sign-input {
+    width: 40px;
+}
+
+.mn-input {
+    width: 85px;
+}
+
+.bn-input {
+    width: 35px;
+}
+
+.form-group-input {
+    display: flex;
+    gap: 5px;
+}
+
+.form-calender-input {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.row-input-xl {
+    width: 500px;
+}

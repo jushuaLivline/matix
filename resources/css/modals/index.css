@@ -1,0 +1,71 @@
+@import "../common.css";
+
+.modal__bg {
+    position: fixed;
+}
+
+.modal__content {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal.modalSs .modal__content {
+    width: 30%;
+}
+
+.modal.modalSs .modal__content .modalInner {
+    width: 90%;
+}
+
+.modalCloseBtn {
+    position: absolute;
+    width: 32px;
+    height: 24px;
+    background-color: var(--label-error);
+    color: #fff;
+    top: 0;
+    right: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.modalCloseBtn::before {
+    content: '';
+    position: relative;
+    top: -1.5px;
+    font-size: 1.25rem;
+}
+
+.pageHeaderBox {
+    background-color: var(--header-title-box-color);
+    color: #fff;
+    padding: 5px;
+}
+
+.box {
+    background-color: #fff;
+    padding: 30px;
+    position: relative;
+}
+
+.float-right {
+    float: right;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+.section {
+    margin: 25px 0 15px 0;
+}

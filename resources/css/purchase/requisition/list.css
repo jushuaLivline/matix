@@ -1,0 +1,76 @@
+.calendar-plugin input {
+    text-align: left;
+    width: 6rem !important;
+}
+
+.btnExport {
+    cursor: pointer;
+}
+
+.table th {
+    white-space: nowrap;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.table td {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* テーブルの列幅設定 */
+.table th.col-state { min-width: 80px; }
+.table th.col-approval { min-width: 85px; }
+.table th.col-approver { min-width: 90px; }
+.table th.col-department { min-width: 100px; }
+.table th.col-line { min-width: 100px; }
+.table th.col-supplier { min-width: 100px; }
+.table th.col-product { min-width: 200px; }
+.table th.col-quantity { min-width: 70px; }
+.table th.col-price { min-width: 80px; }
+.table th.col-unit { min-width: 60px; }
+.table th.col-amount { min-width: 100px; }
+.table th.col-date { min-width: 85px; }
+.table th.col-deadline { min-width: 85px; }
+.table th.col-number { min-width: 120px; }
+.table th.col-actions { min-width: 130px; }
+
+/* 検索ボタンのスタイリング */
+.search-btn {
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    display: inline-flex; /* inline-flexに変更 */
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle; /* 追加 */
+}
+
+.search-btn svg {
+    margin: auto; /* アイコンの中央配置 */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-range {
+    display: flex;
+    align-items: center;
+}
+
+.range-separator {
+    font-size: 24px;
+    padding: 5px 10px;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}

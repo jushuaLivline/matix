@@ -1,0 +1,17 @@
+select {
+    width: 120px;
+}
+
+.button-div {
+    position: relative;
+}
+
+.button-div a {
+    position: absolute;
+    right: 0;
+}
+
+table td,
+table th {
+    border: 1px solid #B0B0B0 ;
+}

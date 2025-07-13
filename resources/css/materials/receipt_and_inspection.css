@@ -1,0 +1,23 @@
+table td {
+    vertical-align: middle !important;
+}
+
+/*number character*/
+table td:nth-child(2) {
+    text-align: right;
+}
+/*******/
+
+/*text character*/
+table td:nth-child(3),
+table td:nth-child(5)
+{
+    text-align: left;
+}
+/*******/
+
+button {
+    height: 37px;
+}
+
+

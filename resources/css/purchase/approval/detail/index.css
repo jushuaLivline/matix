@@ -1,0 +1,44 @@
+.calendar-plugin input {
+    text-align: left;
+    width: 6rem !important;
+}
+.btnExport {
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    color: #fff !important;
+    opacity: 0.65 !important;
+}
+
+.btn-secondary:hover {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    color: #fff !important;
+    opacity: 0.65 !important;
+    cursor: not-allowed !important;
+}
+
+.w-100px {
+    width: 100px;
+}
+
+.w-400px {
+    width: 400px;
+}
+
+.w-500px {
+    width: 500px;
+}
+
+#flash-message {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    font-size: 18px;
+    color: #0d9c38;
+    margin-bottom: 10px;
+}

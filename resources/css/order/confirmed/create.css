@@ -1,0 +1,60 @@
+#delivery_no,
+#delivery_destination_code {
+    width: 125px;
+}
+
+#plant,
+#acceptance {
+    width: 55px;
+}
+
+.radio-content {
+    margin-right: 126px;
+}
+
+.between {
+    padding-top: 30px;
+    font-weight: 600;
+}
+
+.to-content {
+    margin-top: 27px;
+}
+
+.button-field {
+    margin-top: 30px;
+}
+
+table#list-table td,
+table#list-table th {
+    border: 1px solid #A0A0A0;
+}
+
+table#list-table input[type='text'] {
+    width: 100px;
+}
+
+.delete-btn {
+    background-color: #C45B11;
+    color: white;
+    width: 100px;
+}
+
+.button-group {
+    position: relative;
+}
+
+.button-group #register {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#flash-message {
+    margin-bottom:30px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color:#0d9c38;
+    margin-top: 30px;
+}

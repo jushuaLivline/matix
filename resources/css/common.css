@@ -1,0 +1,697 @@
+:root {
+    --blue: #0797e6;
+    --white: #ffffff;
+    --bright-gray: #ebedef;
+    --vivid-cerulean: #009ce6;
+    --medium-electric-blue: #0852a0;
+    --light-blue: #d3e0ed;
+    --spanish-blue: #036eb7;
+    --st-patrick-blue: #182987;
+    --argent: #bfbfbf;
+    --light-silver: #d9d9d9;
+    --light-green: #aad38c;
+    --gray-dark: #7f7f7f;
+
+    /* can be changed */
+    --header-title-box-color: #182987;
+    --header-color: #009ce6;
+    --footer-color: #0852a0;
+    --label-error: #c00004;
+    --btn-basic: #182987;
+    --btn-success: #99CC66;
+}
+
+.submit-overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --------------------------
+//// Margin and Padding ////
+----------------------------- */
+.mb-5c {
+    margin-bottom: 5px;
+}
+.mb-10c {
+    margin-bottom: 10px;
+}
+.mb-15c {
+    margin-bottom: 15px;
+}
+.mb-20c{
+    margin-bottom: 20px;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-3 {
+    margin-bottom: 3rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mr-5c {
+    margin-right: 5px;
+}
+.mr-10c {
+    margin-right: 10px;
+}
+.mr-15c {
+    margin-right: 15px;
+}
+.mr-20c{
+    margin-right: 20px;
+}
+.mr-half {
+    margin-right: .5rem !important;
+}
+
+.mr-1 {
+    margin-right: 1rem;
+}
+
+.mr-2 {
+    margin-right: 2rem;
+}
+
+.mr-3 {
+    margin-right: 3rem;
+}
+
+.ml-5c {
+    margin-left: 5px;
+}
+.ml-10c {
+    margin-left: 10px;
+}
+.ml-15c {
+    margin-left: 15px;
+}
+.ml-20c{
+    margin-left: 20px;
+}
+
+.ml-half {
+    margin-left: .5rem;
+}
+
+.ml-1 {
+    margin-left: 1rem;
+}
+
+.ml-2 {
+    margin-left: 2rem;
+}
+
+.ml-3 {
+    margin-left: 3rem;
+}
+
+.mt-5c {
+    margin-top: 5px;
+}
+.mt-10c {
+    margin-top: 10px;
+}
+.mt-15c {
+    margin-top: 15px;
+}
+.mt-20c{
+    margin-top: 20px;
+}
+
+.px-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.px-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.px-3 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+.px-10c{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.px-15c{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.px-20c{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.py-10c{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.py-15c{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.py-20c{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.pl-10c{ padding-left: 10px;}
+.pl-15c{ padding-left: 15px;}
+.pl-20c{ padding-left: 20px;}
+
+.pr-10c{ padding-right: 10px;}
+.pr-15c{ padding-right: 15px;}
+.pr-20c{ padding-right: 20px;}
+
+/* --------------------
+//// Font ////
+-------------------- */
+.font10 {
+    font-size: 1em;
+}
+
+.font11 {
+    font-size: 1.1em;
+}
+
+.font12 {
+    font-size: 1.2em;
+}
+
+/* --------------------
+//// Width ////
+-------------------- */
+.w-5 {
+    width: 5%;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-35 {
+    width: 35%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-45 {
+    width: 45%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-55 {
+    width: 55%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-65 {
+    width: 65%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-95 {
+    width: 95%;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+.w-50c {
+    width: 50px;
+}
+.w-75c {
+    width: 75px;
+}
+.w-100c {
+    width: 100px;
+}
+.w-120c {
+    width: 120px;
+}
+.w-130c {
+    width: 130px;
+}
+
+.w-150c {
+    width: 150px;
+}
+.w-190c {
+    width: 190px;
+}
+.w-200c {
+    width: 200px;
+}
+.w-220c {
+    width: 220px;
+}
+.w-250c {
+    width: 250px;
+}
+.w-290c {
+    width: 290px;
+}
+.w-300c {
+    width: 300px;
+}
+.w-400c {
+    width: 400px;
+}
+
+.wi-100c {
+    width: 100px !important;
+}
+.wi-150c {
+    width: 150px !important;
+}
+/* --------------------
+//// Text align ////
+-------------------- */
+.text-left {
+    text-align: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+/* --------------------
+//// PADDING ////
+-------------------- */
+.p-10 { padding: 10px;}
+.p-20 { padding: 20px;}
+.p-30 { padding: 30px;}
+.p-40 { padding: 40px;}
+.p-50 { padding: 50px;}
+
+/* --------------------
+//// Button ////
+-------------------- */
+/* .btn-success {
+    color: #ffffff;
+    background-color: var(--btn-success) !important;
+    border: var(--btn-success) solid 1px !important;
+}
+
+.btn-success:hover {
+    background-color: #336600 !important;
+    border: #336600 solid 1px !important;
+} */
+
+/* --------------------
+//// Other ////
+-------------------- */
+.clear-both {
+    clear: both;
+}
+
+/* --------------------
+//// Search modal ////
+-------------------- */
+.searchResult, .searchResultSecond, .searchResultProcess {
+    padding: 0.75rem;
+    border: #cccccc solid 2px;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    border-top: none;
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.searchResult li, .searchResultSecond li, .searchResultProcess li {
+    border-bottom: gray 1px dashed;
+    margin-bottom: 0.25rem;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.searchResult li.disabled, .searchResultProcess li.disabled {
+    background: #33333380;
+    cursor: default;
+    color: #33333387;
+}
+
+.searchResult li:hover, .searchResultProcess li:hover {
+    background: gainsboro;
+}
+
+.searchResult li.disabled:hover, .searchResultProcess li.disabled:hover {
+    background: #33333380;
+    cursor: default;
+    color: #33333387;
+}
+
+.btnSubmitCustom{
+    width: auto;
+    height: auto;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+
+.btnSubmitCustom img {
+    width: 24px !important;
+    padding-top: 0 !important;
+}
+
+.btnSubmitCustomMachineNumber img {
+    width: 24px !important;
+    padding-top: 5px !important;
+}
+
+select:focus, input:focus, textarea:focus {
+    border: #00c4cc solid 2px;
+}
+
+input:read-only {
+    background-color: #d9d9d9;
+    border: 2px solid var(--argent);
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+.d-flex {
+    display: flex !important;
+}
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.justify-content-start {
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+}
+
+.justify-content-end {
+    -ms-flex-pack: end !important;
+    justify-content: flex-end !important;
+}
+
+.justify-content-center {
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+
+.justify-content-between {
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+}
+
+.justify-content-around {
+    -ms-flex-pack: distribute !important;
+    justify-content: space-around !important;
+}
+
+.align-items-start {
+    -ms-flex-align: start !important;
+    align-items: flex-start !important;
+}
+
+.align-items-end {
+    -ms-flex-align: end !important;
+    align-items: flex-end !important;
+}
+
+.align-items-center {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+.align-items-baseline {
+    -ms-flex-align: baseline !important;
+    align-items: baseline !important;
+}
+
+.align-items-stretch {
+    -ms-flex-align: stretch !important;
+    align-items: stretch !important;
+}
+
+.align-content-start {
+    -ms-flex-line-pack: start !important;
+    align-content: flex-start !important;
+}
+
+.align-content-end {
+    -ms-flex-line-pack: end !important;
+    align-content: flex-end !important;
+}
+
+.align-content-center {
+    -ms-flex-line-pack: center !important;
+    align-content: center !important;
+}
+
+.align-content-between {
+    -ms-flex-line-pack: justify !important;
+    align-content: space-between !important;
+}
+
+.align-content-around {
+    -ms-flex-line-pack: distribute !important;
+    align-content: space-around !important;
+}
+
+.align-content-stretch {
+    -ms-flex-line-pack: stretch !important;
+    align-content: stretch !important;
+}
+
+.align-self-auto {
+    -ms-flex-item-align: auto !important;
+    align-self: auto !important;
+}
+
+.align-self-start {
+    -ms-flex-item-align: start !important;
+    align-self: flex-start !important;
+}
+
+.align-self-end {
+    -ms-flex-item-align: end !important;
+    align-self: flex-end !important;
+}
+
+.align-self-center {
+    -ms-flex-item-align: center !important;
+    align-self: center !important;
+}
+
+.align-self-baseline {
+    -ms-flex-item-align: baseline !important;
+    align-self: baseline !important;
+}
+
+.align-self-stretch {
+    -ms-flex-item-align: stretch !important;
+    align-self: stretch !important;
+}
+
+
+
+/* --------------------
+//// CUSTOM FORMS ////
+-------------------- */
+.symbol-tilde {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+}
+/* ----------------------------------
+CUSTOM STYLE FOR DATEPICKER 
+ALIGN THE MODAL TO CENTER
+HIDE DATES on datepicker-disabled-dates class
+------------------------------------ */
+.datepicker-disabled-dates.picker__input--active + .picker--opened .picker__box table :is(thead, tbody) {
+    display:none !important;
+}
+.picker__input--active + .picker--opened .picker__holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.picker__input--active + .picker--opened .picker__holder .picker__frame {
+    position: relative;
+    margin-bottom: 0;
+}
+.picker--opened .picker__holder .picker__frame {
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+}
+.picker--opened .picker__holder :is(.picker__frame, .picker__wrap ,.picker__box)  {
+    width: 500px;
+    margin-bottom: 0;
+    height: auto;
+}
+
+/* ESTIMATE-199 */
+.per-month-inputs-container .tableAddElement:first-child .remove-btn {
+    display: none;
+}
+.per-month-inputs-container .dz-preview .dz-remove {
+    margin-top: 10px;
+}
+
+.dz-default.dz-message {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.dz-preview .dz-remove {
+   text-decoration: none;
+}
+
+#flash-message {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #0d9c38;
+    background-color: #fff;
+}
+
+/* password input */
+.password-container {
+    position: relative;
+    width: 250px;
+    border: 0;
+    padding: 0 !important;
+}
+
+.password-input {
+    padding-right: 35px; /* space for the icon */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#password-strength {
+    margin-top: 10px;
+    height: 10px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: lightgray;
+    position: relative;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#strength-message {
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 0 10px;
+    width: 218px;
+    color: #fff;
+}
+
+.weak {
+    background-color: red;
+}
+
+.medium {
+    background-color: yellow;
+    color: #000 !important;
+}
+
+.strong {
+    background-color: green;
+}
+
+

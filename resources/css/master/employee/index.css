@@ -1,0 +1,30 @@
+select {
+    width: 120px;
+}
+
+.button-div {
+    position: relative;
+}
+
+.button-div a {
+    position: absolute;
+    right: 0;
+}
+
+table td,
+table th {
+    border: 1px solid #B0B0B0 ;
+}
+
+.w-120px {
+    width: 120px;;
+}
+
+.pagerArea,
+.w-50 {
+    width: 50% !important;
+}
+
+.modal__bg {
+    position: fixed;
+}

@@ -1,0 +1,30 @@
+select {
+    width: 120px;
+}
+
+.button-div {
+    position: relative;
+}
+
+.button-div a {
+    position: absolute;
+    right: 0;
+}
+
+table#project-table td,
+table#project-table th {
+    border: 1px solid #B0B0B0 ;
+}
+
+.pagerArea,
+.w-50 {
+    width: 50% !important;
+}
+
+#flash-message {
+    margin-bottom:30px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color:#0d9c38;
+}

@@ -1,0 +1,20 @@
+.cancel-btn {
+    background: #7D87B1;
+    color: white;
+
+}
+.input-error {
+    border: 2px solid red;
+}
+
+/* 入力フォームのカーソル位置を左に合わせるためのスタイル */
+input[type="text"], 
+input.numberCharacter, 
+input.textCharacter, 
+input.middle-name, 
+input.searchOnInput {
+    text-align: left !important;
+    padding-left: 5px !important;
+    text-indent: 0 !important;
+    direction: ltr !important;
+}

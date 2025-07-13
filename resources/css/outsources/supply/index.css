@@ -1,0 +1,8 @@
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-left { text-align: left !important; }
+td { vertical-align: middle !important;}
+
+.btn-blue {
+    width: 100px;
+}

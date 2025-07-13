@@ -1,0 +1,190 @@
+.fc-multimonth-daygrid-table  {
+    min-height: 150px !important;
+    width: 230px !important;
+}
+
+
+.fc-highlight {
+    background: rgb(209, 45, 0) !important;
+}
+
+.fc-multimonth-header-table {
+    max-width: 230px !important;
+}
+
+.fc .fc-view-harness-active > .fc-view {
+    inset: 0px;
+    position: inherit;
+}
+
+.fc-multimonth-month {
+    max-width: 250px !important;
+    padding: 10px !important;
+    margin: 10px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    font-size: 11px;
+    height: min-content;
+}
+
+.fc-multimonth-header {
+    min-width: 250px !important;
+    margin-bottom: 0 !important;
+    font-size: 12px;
+}
+
+.fc-row {
+    margin-bottom: 10px; /* You can adjust this value as needed */
+}
+
+.fc-col-header-cell{
+    background: none;
+    background-color: #ffffff !important;
+}
+
+.fc-highlight {
+    background-color: #ffffff !important;
+}
+
+.buttonRow {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align the items to the top of the container */
+}
+
+.info {
+    flex-grow: 1; /* Allow the info div to grow and occupy the available space */
+    margin-right: 20px; /* Add some spacing between the info div and the saveAllDiv */
+}
+
+.info > div {
+    display: flex; /* Use flexbox for each line in the info div */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Add spacing between each line in the info div */
+}
+
+.info > div label {
+    width: 200px; /* Add a fixed width for labels to align them properly */
+}
+
+.info > div input {
+    width: 100px;
+    text-align: center;
+}
+
+.saveAllDiv {
+    margin-top: 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.outsideDiv {
+    display: flex;
+    flex-direction: column; 
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border: #cccccc solid 1px;
+}
+
+.fc-view-harness {
+    height: auto !important;
+}
+
+.calendarContainer {
+    width: 95%;
+    margin: 2em;
+}
+
+.buttonRow {
+    width: 95%;
+    margin: 2em;
+}
+.fc-multimonth-title{
+    width:120px;
+    border: 1px solid #fff;
+    display: inline-block;
+    float: left;
+    padding:5px 0px!important;
+    text-align:right!important;
+    margin-bottom:5px;
+}
+
+.fc .fc-button{
+    margin-top: 5px!important;
+    padding: 0 0.65em!important;
+}
+
+.working_days_counters {
+    display: inline-block;
+    width: 70px;
+    border: 2px solid #bfbfbf;
+    border-radius: 5px;
+    padding:4px 5px;
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.label-top {
+    display: block;
+    color: red;
+    margin-bottom: -35px;
+}
+
+.fc-prevYear-button,
+.fc-nextYear-button {
+    background-color: #192887 !important;
+}
+
+.fc-multiMonthYear-view {
+    border: none !important;
+}
+
+#flash-message {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color:#0d9c38;
+}
+
+#info-div label {
+    width: 130px;
+}
+
+#info-div input {
+    border: none !important;
+    background-color: inherit;
+}
+
+.fc-multimonth-daygrid {
+    margin-top: 0 !important;
+}
+
+.fc-multimonth-month {
+    margin: 10px 0 0 0 !important;
+}
+
+.fc-multimonth-daygrid-table,
+.fc-multimonth-header-table {
+    border: 1px solid #DDDDDD !important;
+}
+
+.fc .fc-col-header-cell-cushion {
+    padding: 7px !important;
+}
+
+.fc-multimonth-title {
+    text-align: left !important;
+}
+
+.working_days_counters {
+    display: none;
+}
+
+.fc-daygrid-day-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

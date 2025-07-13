@@ -1,0 +1,22 @@
+.clear {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.clear-button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #0068ae;
+    border: #0077c7 solid 1px;
+    color: white;
+}
+
+.clear-button:hover {
+    background-color: #2b76a7;
+}
+
+.modal_fix_width {
+    position: fixed;
+    width: 30%!important;
+}

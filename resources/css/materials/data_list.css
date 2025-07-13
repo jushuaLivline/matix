@@ -1,0 +1,25 @@
+.checkBasic > span {
+    margin-top: 5px;
+    float: right;
+}
+
+.headerList {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.headerList li:nth-child(2) {
+    margin-bottom: 8px
+}
+
+.headerList li:nth-child(2) input {
+    width: 300px;
+    padding: 8px;
+}
+
+.list-table > tbody > tr > th,
+.list-table > tbody > tr > td {
+    border:1px solid #ccc;
+}
+

@@ -1,0 +1,99 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row div {
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.col-2 {
+    width: calc((100%/12)*2);
+    border: 1px solid #CDCDCD;
+}
+
+.col-3 {
+    width: calc((100%/12)*3);
+}
+
+.col-4 {
+    width: calc((100%/12)*4);
+}
+
+.col-5 {
+    width: calc((100%/12)*5);
+}
+
+.col-9 {
+    width: calc((100%/12)*9);
+}
+
+.col-10 {
+    width: calc((100%/12)*10);
+    border: 1px solid #CDCDCD;
+}
+
+.col-12 {
+    width: calc((100%/12)*12);
+    border: 1px solid #CDCDCD;
+}
+
+.label-div {
+    display: flex;
+    align-items: center;
+}
+
+.w-200px {
+    width: 200px;
+}
+
+.w-150px {
+    width: 150px;
+}
+
+.w-100px {
+    width: 100px;
+}
+
+.w-75px {
+    width: 100px;
+}
+
+.sub-message {
+    color:red;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+input[type='radio']{
+    min-width: 17px !important;
+    min-height: 30px !important;
+    margin: 0;
+}
+
+.mt-5px {
+    margin-top: 5px;
+}
+
+.error-message {
+    color: red;
+}
+
+.btn-blue {
+    color:white;
+}
+
+.btn-blue-gray {
+    color:white;
+}
+
+#flash-message {
+    background-color: #fff;
+    margin-bottom:30px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color:#0d9c38;
+    text-align: center;
+}

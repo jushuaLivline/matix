@@ -1,0 +1,7 @@
+.boxFooter {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    height: 100px
+}

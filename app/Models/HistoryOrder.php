@@ -1,0 +1,72 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class HistoryOrder extends Model
+{
+    use HasFactory;
+    protected $fillable = [
+        'item_code',
+        'accessioning_code',
+        'customer_code',
+        'order_yearmonth',
+        'day_1_amount',
+        'day_2_amount',
+        'day_3_amount',
+        'day_4_amount',
+        'day_5_amount',
+        'day_6_amount',
+        'day_7_amount',
+        'day_8_amount',
+        'day_9_amount',
+        'day_10_amount',
+        'day_11_amount',
+        'day_12_amount',
+        'day_13_amount',
+        'day_14_amount',
+        'day_15_amount',
+        'day_17_amount',
+        'day_18_amount',
+        'day_19_amount',
+        'day_20_amount',
+        'day_21_amount',
+        'day_22_amount',
+        'day_23_amount',
+        'day_24_amount',
+        'day_25_amount',
+        'day_26_amount',
+        'day_27_amount',
+        'day_28_amount',
+        'day_29_amount',
+        'day_30_amount',
+        'day_31_amount',
+        'currentmonth_amount',
+        'nextmonth_amount',
+        'monthafternext_amount',
+        'instruction_classification',
+        'direct_destination',
+        'back_number',
+        'cycle',
+        'capacity',
+        'aisin_plant_code',
+        'charge_code',
+        'minimum_delivery_unit',
+        'number_per_day',
+        'number_of_cards',
+        'number_of_kanban',
+        'standard_inventory',
+        'sptp_classification',
+        'factory_src',
+        'factory_dest',
+        'data_classification',
+        'current_month_order_rate_weighted_decomposition_number',
+        'color_code',
+        'customer_item_code',
+        'aisin_customer_code',
+        'variation_code',
+        'input_classification',
+    ];
+}

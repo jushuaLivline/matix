@@ -1,0 +1,4973 @@
+@charset "UTF-8";
+@import "variables";
+@import "utilities/common";
+@import "utilities/reset";
+@import "utilities/spacing";
+@import "utilities/buttons";
+@import "utilities/float";
+@import "utilities/bg";
+
+/********************
+.common
+*********************/
+html,
+body {
+    height: 100%;
+    padding-top: 20px;
+}
+
+.w-auto{
+    width: auto;
+}
+
+body {
+    background-color: var(--bright-gray);
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-width: 1240px;
+    min-height: 100%;
+}
+
+
+/********************
+.header
+*********************/
+
+.header {
+    position: fixed;
+    width: 100%;
+    top:0px;
+    box-sizing: border-box;
+    padding: 0 20px 0px 60px;
+    background-color: var(--header-color);
+    z-index: 11;
+}
+
+.header .headerInner {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.siteTtl {
+    color: #ffffff;
+    font-size: 100%;
+    height: 2.5rem;
+    letter-spacing: 0.35em;
+    background-color: var(--white);
+}
+
+.siteTtl > a {
+    color: #ffffff;
+}
+
+.siteTtl img {
+    height: 2.5rem;
+}
+
+.desText > i {
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "游ゴシック";
+    color: var(--white);
+}
+
+.loginBox {
+    position: absolute;
+    top: 0.25rem;
+    right: 0;
+    color: #ffffff;
+}
+
+.loginBox li {
+}
+
+.loginBox .loginName {
+    display: inline-block;
+    padding: 0.25em 1em 0.25em 0.25em;
+}
+
+.loginBox .loginBtn {
+    display: inline-block;
+    margin: 0;
+}
+
+.loginBox .loginBtn > a {
+    display: inline-block;
+    padding: 0.25em 1.2em;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 0.3em;
+    color: #333333;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.loginBox .loginBtn > a:hover {
+    background-color: #defeff;
+}
+
+/********************
+.container
+*********************/
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 20px 120px;
+    /*
+    background-color: #eaedef;
+    background-image: url("/img/dot_fine_headb.png"),url("/img/dot_fine_headb.png");
+    background-position: 0 top , 0 bottom;
+    background-repeat: repeat-x , repeat-x;
+    */
+}
+
+.containerInner {
+    /*width:1200px;*/
+    min-width: 1200px;
+    margin: 0 auto;
+}
+
+/****containerを縦の中央合わせ****/
+
+.container.centralContainer {
+    padding: 20px 20px 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+/********************
+.sidenavi
+*********************/
+.sidenavi {
+    font-size: 0.9em;
+}
+
+.sidenaviInner {
+    width: 100%;
+}
+
+.naviBox {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 0em;
+    border-left: none;
+}
+
+.naviBox .navimenuttl {
+    border-top: #b4c7e7 solid 1px;
+    background-color: #b4c7e7;
+    color: black;
+    font-weight: 600;
+    padding: 0em 0.25em 0.15em 0.1em;
+}
+
+.naviBox ul {
+    padding: 0em 0em 0.25em 0em;
+}
+
+.naviBox ul > .navimenuTop {
+    padding: 0.25em 0em 0em 0em;
+}
+
+.naviBox ul > li {
+    padding: 0.25em 0em 0em 2em;
+}
+
+.naviBox ul > li > a {
+    border-radius: 4px 0 0 4px;
+    display: block;
+    padding: 0em 0.5em 0em 0.25em;
+    position: relative;
+    line-height: 1.6;
+}
+
+.naviBox ul > li > a:hover {
+    color: #ffffff;
+    background-color: #1498a6;
+}
+/**スライドメニューの枠 **/
+
+.menu-drawer .btn {
+    background: #0852a0;
+    /*border-right: #eaedef solid 2px;*/
+    /*border-bottom: #eaedef solid 2px;*/
+    border-radius: 0.3em;
+    width: 47px;
+    padding: 5px 0;
+    cursor: pointer;
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
+.menu-drawer .btn::before,
+.menu-drawer .btn::after {
+    content: " ";
+    background-image: url("../../public/images/icons/icon_menu_open.png");
+    background-position: center center;
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.menu-drawer .btn::before {
+    background-image: url("../../public/images/icons/icon_menu_open.png");
+}
+
+.menu-drawer .btn::after {
+    background-image: url("../../public/images/icons/icon_menu_close.png");
+}
+
+.menu-drawer .other {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.menu-drawer .menu-content {
+    background-color: var(--white);
+    width: 350px;
+    top: 40px;
+    left: 0;
+    height: 90vh;
+    border: var(--medium-electric-blue) solid 3px;
+    border-left: none;
+    overflow-y: auto;
+}
+
+.menu-drawer .btn,
+.menu-drawer .menu-content,
+.menu-drawer .other {
+    position: fixed;
+}
+
+.menu-drawer .btn {
+    z-index: 2001;
+}
+
+.menu-drawer .menu-content {
+    z-index: 2000;
+}
+
+.menu-drawer .other {
+    z-index: 1999;
+}
+
+.menu-drawer #chk {
+    display: none;
+}
+
+.menu-drawer #chk ~ .btn::before {
+    display: block;
+}
+
+.menu-drawer #chk ~ .btn::after {
+    display: none;
+}
+
+.menu-drawer #chk ~ .other {
+    display: none;
+}
+
+.menu-drawer #chk:checked ~ .btn::before {
+    display: none;
+}
+
+.menu-drawer #chk:checked ~ .btn::after {
+    display: block;
+}
+
+.menu-drawer #chk:checked ~ .other {
+    display: block;
+}
+
+.menu-drawer #chk ~ .menu-content {
+    transform: translate(-350%, 0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-drawer #chk:checked ~ .menu-content {
+    transform: none;
+}
+
+
+/********************
+.footer
+*********************/
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.25rem 20px;
+    border-top: #e0e0e0 solid 1px;
+    background-color: var(--footer-color);
+}
+
+.footerInner {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footerInner .footerCopyright {
+    font-size: 70%;
+    color: var(--white);
+    text-align: center;
+    letter-spacing: 0.125rem;
+}
+
+/********************
+.content
+*********************/
+.content {
+    /*float: right;*/
+    box-sizing: border-box;
+    /*width:calc(100% - 200px);*/
+    width: 100%;
+}
+
+.content .contentInner {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pagettlWrap {
+    margin-bottom: 20px;
+    /*background-color: #c8eaac;*/
+    /*border-radius: 4px;*/
+    /*border: #54b108 solid 1px;*/
+}
+
+.pagettlWrap h1 {
+    /*padding-left: 0.8em;*/
+    /*letter-spacing: 0.05rem;*/
+    /*line-height: 1.8;*/
+}
+
+.pagettlWrap h1 > span {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 1.2em;
+    padding-left: 0.8em;
+    letter-spacing: 0.05em;
+}
+
+.pagettlWrap h1 > span::before {
+    position: absolute;
+    top: -0.05em;
+    left: 0em;
+    display: inline-block;
+    content: '';
+    box-sizing: border-box;
+    z-index: 1;
+    background-color: var(--spanish-blue);
+    width: 10px;
+    height: 24px;
+}
+
+.pagettlNomalWrap h1 > span {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 1.2em;
+    padding-left: 1em;
+    letter-spacing: 0.05em;
+}
+
+.descriArea {
+    margin-top: 0.5rem;
+    line-height: 1.3;
+}
+
+
+.contttlWrap {
+    margin-top: 2rem;
+}
+
+.contttlWrap h2 {
+    line-height: 1.2em;
+    font-size: 100%;
+    /*border-left: #54b108 solid 8px;*/
+    padding-left: 0em;
+    margin-bottom: 0.25em;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.contsubttlWrap {
+    margin-top: 1rem;
+}
+
+.contsubttlWrap h3 {
+    line-height: 1.2em;
+    border-bottom: #c4c4c4 dotted 1px;
+    padding: 0 0.25em 0.25em 0.25em;
+    margin-bottom: 0.25em;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+}
+
+
+/***インフォメーションarea***/
+
+.infoBoxArea {
+    width: 100%;
+    margin-top: 0.5rem;
+    background-color: #ffffff;
+    border: #e0e0e0 solid 1px;
+    padding: 4em 1.5em 4em 1.5em;
+    box-sizing: border-box;
+}
+
+.contCenterttlWrap {
+    margin-top: 0rem;
+}
+
+.contCenterttlWrap h2 {
+    line-height: 1.3em;
+    font-size: 120%;
+    margin-bottom: 1em;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    color: #1a8cff;
+    text-align: center;
+}
+
+/********************
+.widthLimitWrap コンテンツ幅を決める
+*********************/
+.widthLimitWrap {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.widthLimitWrap.wlw700 {
+    width: 700px;
+}
+
+/**table***********/
+/** テーブルの土台 **/
+.tableWrap {
+    width: 100%;
+    margin-top: 0.5rem;
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    border: #cccccc solid 1px;
+    /*box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.05);*/
+}
+
+.tableWrap .tableBasic {
+    width: 100%;
+    border-top: #cccccc solid 1px;
+    /*border-left: #cccccc solid 1px;*/
+}
+
+.tableBasic tr > th,
+.tableBasic tr > td {
+    /*border-right: #cccccc solid 1px;*/
+    border-bottom: #cccccc solid 1px;
+    padding: 0.3em 0.25em;
+    box-sizing: border-box;
+}
+.tableBasic.has-border tr :is(td, th){
+    border: #cccccc solid 1px;
+}
+.exportExcel {
+    display: inline-block;
+    background-color: rgb(110, 215, 110);
+    color: #000000;
+    padding: 10px 20px;
+    text-decoration: none;
+    float: right;
+    line-height: 1.3;
+    border-radius: 6px;
+}
+
+.tableBasic tr > th {
+    background-color: #d9dadb;
+}
+
+.tableBasic tr > td {
+}
+
+.tableBasic tr > td > .innersetwrap {
+    display: table;
+    width: 100%;
+}
+
+.tableBasic tr > td > .innersetwrap > li {
+    display: table-cell;
+    padding-right: 0.5em;
+    vertical-align: middle;
+}
+
+.tableBasic tr > td > .innersetwrap > li:last-child {
+    padding-right: 0;
+}
+
+/** innersetwrap 縦積み　vertical stack**/
+.tableBasic tr > td > .innersetwrap.verticalStack {
+    display: block;
+}
+
+.tableBasic tr > td > .innersetwrap.verticalStack > li {
+    display: block;
+    padding-right: 0em;
+    margin-bottom: 0.25em;
+}
+
+.tableBasic tr > td > .innersetwrap.verticalStack > li:last-child {
+    margin-bottom: 0;
+}
+
+.tableBasic tr > td > .innersetwrap.verticalStack a.buttonBasic.buttonSs,
+.tableBasic tr > td > .innersetwrap.verticalStack input.buttonBasic.buttonSs {
+    padding: 0.1em 0.25em 0em 0.25em;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+/* Add borders to the table and its cells */
+.tableBasic.bordered {
+    border-collapse: collapse;
+    border: 1px solid #5b5a5a;
+}
+
+.tableBasic.bordered th {
+    border: 1px solid #5b5a5a;
+}
+
+.tableBasic.bordered td {
+    border: 1px solid #5b5a5a;
+}
+
+
+/** テーブルの土台 に ボーダー有りテーブル**/
+.tableWrap.bordertable {
+}
+
+.tableWrap.bordertable .tableBasic {
+}
+
+.tableWrap.bordertable .tableBasic tr > th,
+.tableWrap.bordertable .tableBasic tr > td {
+    vertical-align: middle;
+
+}
+
+.tableWrap.bordertable .tableBasic tr > th {
+    background-color: #d9dadb;
+    line-height: 1.2;
+}
+
+.tableWrap.bordertable .tableBasic tr > td {
+    font-size: 100%;
+}
+
+.tableWrap.bordertable .tableBasic select,
+.tableWrap.bordertable .tableBasic input,
+.tableWrap.bordertable .tableBasic textarea {
+    font-size: 100%;
+}
+
+/** テーブルの土台 に ボーダー無しテーブル**/
+.tableWrap.borderLesstable {
+    /*border: #e0e0e0 solid 1px;*/
+    padding: 0 0 10px;
+    /*box-sizing: border-box;*/
+}
+
+.tableWrap.borderLesstable .tableBasic {
+    border-top: none;
+    border-left: none;
+    margin: 10px;
+    width: calc(100% - 20px);
+}
+
+.tableIntitle {
+    background-color: #e0e0e0;
+    padding: 10px 10px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.tableWrap.borderLesstable .tableBasic tr > th,
+.tableWrap.borderLesstable .tableBasic tr > td {
+    border-right: none;
+    border-bottom: none;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    vertical-align: top;
+}
+
+.tableWrap.borderLesstable .tableBasic tr > th {
+    background-color: #d9dadb;
+}
+
+.tableWrap.borderLesstable .tableBasic tr > td {
+}
+
+/** ボーダー無しテーブル内に必須枠**/
+.tableWrap.borderLesstable .tableBasic.requiredBox {
+    background-color: #d6e0ea;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.tableWrap.borderLesstable .tableBasic.requiredBox tr > td {
+    padding: 0.5rem 1rem 0.5rem 1em;
+}
+
+.tableWrap.borderLesstable .tableBasic.requiredBox .formsetBox > dt {
+    border-left: #ff8800 solid 10px;
+    width: 10em;
+}
+
+.tableWrap.borderLesstable .tableBasic.requiredBox .formsetBox > dd {
+    width: calc(100% - 10em);
+    text-align: center;
+}
+
+.copyWrap {
+    border: #e0e0e0 solid 1px;
+    background-color: #fafafa;
+}
+
+.copyWrap .formsetBox {
+    margin-left: 0.5em;
+}
+
+.copyWrap .formsetBox > dt {
+    border-left: #00d180 solid 4px;
+}
+
+
+.formsetBox {
+    width: 100%;
+    overflow: hidden;
+    // line-height: 1.5;
+}
+
+.formsetBox > dt,
+.formsetBox > dd {
+    box-sizing: border-box;
+    float: left;
+}
+
+.formsetBox > dt {
+    /*border-left: #5578c6 solid 4px;*/
+    padding: 0.4em 0.25em 0.4em 0em;
+    width: 12em;
+    font-weight: bold;
+    clear: both;
+}
+
+.formsetBox > dd {
+    width: calc(100% - 12em);
+}
+
+.formsetBox > dd .formPack {
+    display: inline-block;
+    vertical-align: middle;
+    // margin-right: 0.25em;
+}
+
+.formsetBox > dd .formPack:last-child {
+    margin-right: 0em;
+}
+
+.formsetBox > dd .formPack.formInnertxt {
+    color: #888888;
+}
+
+.formsetBox > dd .formPack.fixedWidth {
+}
+
+.formsetBox > dd .formPack.fixedWidth .formpostBox,
+.formsetBox > dd .formPack.fixedWidth input,
+.formsetBox > dd .formPack.fixedWidth select,
+.formsetBox > dd .formPack.fixedWidth textarea {
+    width: 100%;
+}
+
+.formsetBox > dd .formPack.fixedWidth.fpfw100p {
+    width: 100%;
+}
+
+.formsetBox > dd .formPack.fixedWidth.fpfw50p {
+    width: 49%;
+}
+
+.formsetBox > dd .formPack.fixedWidth.fpfw25p {
+    max-width: 24.5%;
+}
+
+.formsetBox > dd .formPack.fixedWidth.fpfw75p {
+    width: 72%;
+}
+
+.formsetBox > dd .formPack.withUnits {
+    display: inline-flex;
+}
+
+.formsetBox > dd .formPack.withUnits .formpostBox,
+.formsetBox > dd .formPack.withUnits input,
+.formsetBox > dd .formPack.withUnits select,
+.formsetBox > dd .formPack.withUnits textarea {
+    border-radius: 6px 0px 0px 6px;
+}
+
+.formsetBox > dd .formPack.fixedWidth.withUnits.fpfw50p {
+    width: calc(49% + 50px);
+}
+
+.formsetBox > dd .formPack.fixedWidth.withUnits.fpfw25p {
+    width: calc(24.5% + 50px);
+}
+
+.formsetBox > dd .formPack.fixedWidth.withUnits.fpfw75p {
+    width: calc(72% + 50px);
+}
+
+.formsetBox > dd .formPack.fixedWidth.withUnits .formpostBox,
+.formsetBox > dd .formPack.fixedWidth.withUnits input,
+.formsetBox > dd .formPack.fixedWidth.withUnits select,
+.formsetBox > dd .formPack.fixedWidth.withUnits textarea {
+    width: calc(100% - 50px);
+}
+
+.unitbox {
+    display: inline-block;
+    border-radius: 0px 6px 6px 0px;
+    line-height: 1.3;
+    padding: 0.5em 0.6em 0.15em 0.5em;
+    font-size: 14px;
+    color: #808080;
+    background-color: #eaeaea;
+    vertical-align: bottom;
+    border-top: #aaaaaa solid 1px;
+    border-bottom: #aaaaaa solid 1px;
+    border-right: #aaaaaa solid 1px;
+}
+
+.formsetBox > dd .formPack.withUnits .formpostBox + .unitbox,
+.formsetBox > dd .formPack.withUnits :disabled + .unitbox {
+    border: none;
+    color: #aaaaaa;
+}
+
+/****/
+
+.kojoInputwin .formsetBox > dt {
+    width: 6.5em;
+}
+
+.kojoInputwin .formsetBox > dd {
+    width: calc(100% - 6.5em);
+}
+
+.tableBasic.miniTtltable .formsetBox > dt {
+    width: 7.5em;
+}
+
+.tableBasic.miniTtltable .formsetBox > dd {
+    width: calc(100% - 7.5em);
+}
+
+.formsetBox.ttlnone > dt {
+    border: none;
+    padding: 0;
+    width: 0;
+    font-weight: bold;
+    clear: both;
+}
+
+.formsetBox.ttlnone > dd {
+    width: 100%;
+}
+
+.tA-le {
+    text-align: left;
+}
+
+.tA-ri {
+    text-align: right;
+}
+
+.tA-cn {
+    text-align: center;
+}
+
+.vA-top {
+    vertical-align: top !important;
+}
+
+.tC-red {
+    color: #dd0000;
+}
+
+.ninsyoColor {
+    font-weight: bold;
+    color: #37c437;
+}
+
+select,
+input,
+textarea {
+    font-family: 'Arial', 'Helvetica Neue', 'Helvetica', 'Yu Gothic Medium', 'YuGothic', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    color: #333333;
+    letter-spacing: 0em;
+    border: var(--argent) solid 2px;
+    border-radius: 6px;
+    line-height: 1.3;
+    padding: 0.4em 0.4em;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+    border: #00c4cc solid 1px;
+}
+
+input:disabled {
+    border: #eaeaea solid 1px;
+    color: #cccccc;
+}
+
+input[type="file"] {
+    font-family: 'Arial', 'Helvetica Neue', 'Helvetica', 'Yu Gothic Medium', 'YuGothic', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    color: #333333;
+    letter-spacing: 0em;
+    border: none;
+    border-radius: 0px;
+    line-height: 1.3;
+    padding: 0;
+    cursor: pointer;
+}
+
+a.buttonBasic,
+input.buttonBasic {
+    display: inline-block;
+    box-sizing: border-box;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    padding: 1em 0.65em 1em 0.75em;
+    letter-spacing: 0.1em;
+    border: #aaaaaa solid 1px;
+    border-radius: 6px;
+    line-height: 1.3;
+}
+
+a.buttonBasic:hover,
+input.buttonBasic:hover {
+    border: #00c4cc solid 1px;
+    background-color: #defeff;
+}
+
+a.buttonBasic:disabled,
+input.buttonBasic:disabled {
+    border: #eaeaea solid 1px;
+    color: #cccccc;
+    background-color: #dddddd;
+}
+
+a.buttonBasic:disabled:hover,
+input.buttonBasic:disabled:hover {
+    border: #eaeaea solid 1px;
+    color: #cccccc;
+    background-color: #dddddd;
+}
+
+a.buttonBasic.buttonSs,
+input.buttonBasic.buttonSs {
+    padding: 0.4em 0.65em 0.4em 0.75em;
+    letter-spacing: 0em;
+    white-space: nowrap;
+}
+
+a.buttonBasic.buttonLs,
+input.buttonBasic.buttonLs {
+}
+
+input.buttonBasic {
+    /*border: none;*/
+    cursor: pointer;
+}
+
+.buttonlistWrap {
+    margin: 2em auto 0;
+    display: table;
+    width: 100%;
+}
+
+.buttonlistWrap.btnWrap-right {
+    margin: 2em 0 0 auto;
+}
+
+.buttonlistWrap.btnWrap-left {
+    margin: 2em auto 0 0;
+}
+
+.buttonlistWrap li {
+    display: table-cell;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.buttonlistWrap li > a.buttonBasic,
+.buttonlistWrap li > input.buttonBasic {
+    width: 100%;
+}
+
+.buttonlistWrap li:last-child {
+    padding-right: 0;
+}
+
+/** ボーダー無しテーブルのボタン**/
+.tableWrap.borderLesstable .buttonlistWrap {
+    margin: 0em auto 0;
+}
+
+.tableWrap.borderLesstable .buttonlistWrap a.buttonBasic,
+.tableWrap.borderLesstable .buttonlistWrap input.buttonBasic {
+    padding: 0.4em 0.75em 0.4em 0.75em;
+}
+
+/**印刷PDF　CSVアイコン**/
+.opPDF:after {
+    content: "PDF";
+    background-color: #e83f1b;
+    padding: 1px 1.3em 1px 0.2em;
+    margin-left: 4px;
+    border-radius: 6px;
+    font-weight: bold;
+    /*background-image: url(/img/icon-after_output.png);*/
+    background-size: 1em 1em;
+    background-position: center right 0.2em;
+    background-repeat: no-repeat;
+}
+
+.opCSV:after {
+    content: "CSV";
+    background-color: #007447;
+    padding: 1px 1.3em 1px 0.2em;
+    margin-left: 4px;
+    border-radius: 3px;
+    font-weight: bold;
+    /*background-image: url(/img/icon-after_output.png);*/
+    background-size: 1em 1em;
+    background-position: center right 0.2em;
+    background-repeat: no-repeat;
+}
+
+.opPDF.btn-disabled:after,
+.opCSV.btn-disabled:after {
+    background-color: #aaaaaa;
+    color: #ffffff;
+    opacity: 0.3;
+}
+
+/*****/
+
+/*ボタンカラー*/
+a.buttonBasic.bColor-ok,
+input.buttonBasic.bColor-ok {
+    color: #ffffff;
+    background-color: var(--btn-basic);
+    border: #0077c7 solid 1px;
+}
+
+a.buttonBasic.bColor-ok:hover,
+input.buttonBasic.bColor-ok:hover {
+    background-color: #0068ae;
+    border: #0077c7 solid 1px;
+}
+
+a.buttonBasic.bColor-no,
+input.buttonBasic.bColor-no {
+    background-color: #e12525;
+}
+
+a.buttonBasic.bColor-no:hover,
+input.buttonBasic.bColor-no:hover {
+    background-color: #ff0000;
+}
+
+a.buttonBasic.bColor-cancel,
+input.buttonBasic.bColor-cancel {
+    background-color: #dae3f3;
+}
+
+a.buttonBasic.bColor-cancel:hover,
+input.buttonBasic.bColor-cancel:hover {
+    background-color: #c0cfe9;
+}
+
+a.buttonBasic.bColor-base,
+input.buttonBasic.bColor-base {
+    background-color: #007dfc;
+}
+
+a.buttonBasic.bColor-base:hover,
+input.buttonBasic.bColor-base:hover {
+    background-color: #399bff;
+}
+
+a.buttonBasic.bColor-etc,
+input.buttonBasic.bColor-etc {
+    background-color: #ff8800;
+}
+
+a.buttonBasic.bColor-etc:hover,
+input.buttonBasic.bColor-etc:hover {
+    background-color: #ffc054;
+}
+
+a.buttonBasic.bColor-green,
+input.buttonBasic.bColor-green {
+    color: #ffffff;
+    background-color: #25c83e;
+}
+
+a.buttonBasic.bColor-green:hover,
+input.buttonBasic.bColor-green:hover {
+    color: #727171;
+    background-color: #5ff84e;
+}
+
+a.buttonBasic.bColor-day1,
+input.buttonBasic.bColor-day1 {
+    background-color: #36a1ad;
+}
+
+a.buttonBasic.bColor-day1:hover,
+input.buttonBasic.bColor-day1:hover {
+    background-color: #36a1ad;
+}
+
+a.buttonBasic.bColor-day2,
+input.buttonBasic.bColor-day2 {
+    background-color: #366bad;
+}
+
+a.buttonBasic.bColor-day2:hover,
+input.buttonBasic.bColor-day2:hover {
+    background-color: #366bad;
+}
+
+.noteList {
+    margin-top: 0.5em;
+    font-size: 88%;
+}
+
+.noteList li {
+    margin-bottom: 0.25em;
+    line-height: 1.3em;
+    text-indent: -1em;
+    margin-left: 1em;
+}
+
+.textcolorRed {
+    color: #dd0000 !important;
+}
+
+.textcolorBlue {
+    color: #007dfc !important;
+}
+
+.textcolorGreen {
+    color: #00a907 !important;
+}
+
+.textweightBold {
+    font-weight: bold !important;
+}
+
+/****ラジオとチェック********************************************
+labelにcustomCheckを入れるとカスタム
+**************************************************************/
+
+label.customCheck {
+    word-break: break-all;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    padding: 0.1em 0;
+}
+
+label.customCheck input[type="checkbox"],
+label.customCheck input[type="radio"] {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+label.customCheck input + span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.2;
+
+    border: #aaaaaa solid 1px;
+    background-color: #ffffff;
+    padding: 0.25em 0.5em 0.25em 1.5em;
+    border-radius: 1em;
+}
+
+/* RADIO BUTTON */
+label.customCheck input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+label.customCheck input[type="radio"] + span {
+}
+
+label.customCheck input[type="radio"] + span::after {
+    position: absolute;
+    top: 0.75em;
+    left: 0.65em;
+    display: inline-block;
+    content: '';
+    box-sizing: border-box;
+    z-index: 1;
+
+    border-radius: 20px;
+    background-color: #cccccc;
+    width: 8px;
+    height: 8px;
+}
+
+label.customCheck input[type="radio"]:checked + span::after {
+    background-color: #ffcc00;
+}
+
+/* CHECKBOX */
+label.customCheck input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+label.customCheck input[type="checkbox"] + span {
+}
+
+label.customCheck input[type="checkbox"] + span::after {
+    position: absolute;
+    top: 0.6em;
+    left: 0.7em;
+    display: inline-block;
+    content: '';
+    box-sizing: border-box;
+
+    z-index: 1;
+    margin: 0 0;
+    width: 0.45em;
+    height: 0.7em;
+
+    border: 4px solid #cccccc;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+label.customCheck input[type="checkbox"]:checked + span::after {
+    border: 4px solid #ffcc00;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/***/
+
+
+label.customCheck input:hover + span {
+    border: #00c4cc solid 1px;
+    background-color: #ffffff;
+}
+
+label.customCheck input:checked + span {
+    border: #00c4cc solid 1px;
+    background-color: #00c4cc;
+    color: #ffffff;
+}
+
+label.customCheck input:disabled + span {
+    color: #dddddd;
+    background-color: #fafafa;
+    border: #f0f0f0 solid 1px;
+}
+
+/**********************/
+
+
+label.customCheck.listInnerCheck {
+    padding-left: 0;
+    border: none;
+    padding-top: 0.0em;
+    padding-bottom: 0.0em;
+    border-radius: 0px;
+    background-color: inherit;
+    display: inline;
+}
+
+label.customCheck.listInnerCheck input + span {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+}
+
+label.customCheck.listInnerCheck input[type="radio"] + span::after {
+    top: 6px;
+    left: 7px;
+}
+
+label.customCheck.listInnerCheck input[type="checkbox"] + span::after {
+    top: 3px;
+    left: 8px;
+}
+
+
+label.customCheck input[type="radio"]:disabled + span,
+label.customCheck input[type="checkbox"]:disabled + span {
+    color: #dddddd;
+}
+
+label.customCheck input[type="radio"]:disabled + span::before,
+label.customCheck input[type="checkbox"]:disabled + span::before {
+    border-color: #f0f0f0;
+}
+
+.nonlinewrap label.customCheck {
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-radius: 0;
+    background-color: inherit;
+    display: inline;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/*Tabによるフォーカス*/
+label.customCheck input[type="radio"]:focus + span::before,
+label.customCheck input[type="checkbox"]:focus + span::before {
+    /*
+    border: #000000 solid 2px;
+    */
+}
+
+/****ボタンの見た目でラジオとチェック*******************************
+labelにinputBtnstyle
+**************************************************************/
+.inputBtnstyle {
+    word-break: break-all;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    position: relative;
+}
+
+label.inputBtnstyle input[type="radio"],
+label.inputBtnstyle input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+label.inputBtnstyle span.inputButton {
+    display: inline-block;
+    box-sizing: border-box;
+    color: #606060;
+    text-align: center;
+    text-decoration: none;
+    background-color: #d1dfed;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    line-height: 1.3;
+    padding: 0.2em 0.65em 0.2em 1.5em;
+    cursor: pointer;
+}
+
+label.inputBtnstyle span.inputButton:hover {
+    background-color: #a4cffb;
+}
+
+label.inputBtnstyle input[type="radio"] + span.inputButton::before,
+label.inputBtnstyle input[type="checkbox"] + span.inputButton::before {
+    border: 4px solid #cdd2d7;
+    border-width: 0 3px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: -0em 0em 0em 1.1em;
+    width: 0.5em;
+    height: 0.9em;
+    position: absolute;
+    top: 0em;
+    left: 0;
+    display: inline-block;
+    content: '';
+    box-sizing: border-box;
+}
+
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton {
+    color: #ffffff;
+    background-color: #00c4cc;
+}
+
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton:hover,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton:hover {
+    background-color: #149da3;
+}
+
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton::before,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton::before {
+    border: 4px solid #ffc649;
+    border-width: 0 3px 4px 0;
+}
+
+/*Tabによるフォーカス*/
+label.inputBtnstyle input[type="radio"]:focus + span,
+label.inputBtnstyle input[type="checkbox"]:focus + span {
+    /*
+    border: #000000 solid 2px;
+    */
+}
+
+/****エラー文字*******************************/
+
+.error_msg {
+    color: #dd0000;
+    font-weight: bold;
+}
+
+.validation-error-message, 
+.validation-error-message * {
+    color: #dd0000;
+    font-weight: bold;
+    display: block;
+}
+
+/****アイコン*******************************/
+
+.iconText {
+    position: relative;
+    line-height: 2em;
+    padding-left: 0.2em;
+    display: inline-block;
+}
+
+/*.iconText:before {*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    content: "";*/
+/*    display: inline-block;*/
+/*    width: 2em;*/
+/*    height: 2em;*/
+/*    background-size: 2em auto;*/
+/*    background-position: center center;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+
+.iconText.icon-common:before {
+    /*background-image: url("/img/iconsvg_common.svg");*/
+}
+
+.iconText.icon-estimates:before {
+    /*background-image: url("/img/iconsvg_estimates.svg");*/
+}
+
+.iconText.icon-send-order:before {
+    /*background-image: url("/img/iconsvg_send-order.svg");*/
+}
+
+.iconText.icon-place-order:before {
+    /*background-image: url("/img/iconsvg_place-order.svg");*/
+}
+
+.iconText.icon-purchase:before {
+    /*background-image: url("/img/iconsvg_purchase.svg");*/
+}
+
+.iconText.icon-inventory:before {
+    /*background-image: url("/img/iconsvg_inventory.svg");*/
+}
+
+.iconText.icon-production-plan:before {
+    /*background-image: url("/img/iconsvg_production-plan.svg");*/
+}
+
+.iconText.icon-setting:before {
+    /*background-image: url("/img/iconsvg_setting.svg");*/
+}
+
+.iconText.icon-account:before {
+    /*background-image: url("/img/iconsvg_account.svg");*/
+}
+
+.iconText.icon-information:before {
+    /*background-image: url("/img/iconsvg_information.svg");*/
+}
+
+.iconText.icon-other:before {
+    /*background-image: url("/img/iconsvg_other.svg");*/
+}
+
+.iconText.icon-monthlyconf:before {
+    /*background-image: url("/img/iconsvg_monthlyconf.svg");*/
+}
+
+.iconText.icon-newconf:before {
+    /*background-image: url("/img/iconsvg_newconf.svg");*/
+}
+
+.iconText.icon-attendance:before {
+    /*background-image: url("/img/iconsvg_attendance.svg");*/
+}
+
+.iconText.icon-personnel:before {
+    /*background-image: url("/img/iconsvg_personnel.svg");*/
+}
+
+.iconText.icon-company:before {
+    /*background-image: url("/img/iconsvg_company.svg");*/
+}
+
+.iconText.icon-idcontrol:before {
+    /*background-image: url("/img/iconsvg_idcontrol.svg");*/
+}
+
+.iconText.icon-point:before {
+    /*background-image: url("/img/iconsvg_point.svg");*/
+}
+
+.iconText.icon-authority:before {
+    /*background-image: url("/img/iconsvg_authority.svg");*/
+}
+
+.iconText.icon-output:before {
+    /*background-image: url("/img/iconsvg_output.svg");*/
+}
+
+.iconText.icon-dashboard:before {
+    /*background-image: url("/img/iconsvg_dashboard.svg");*/
+}
+
+.iconText.icon-paid:before {
+    /*background-image: url("/img/iconsvg_paid.svg");*/
+}
+
+.iconText.icon-shift:before {
+    /*background-image: url("/img/iconsvg_shift.svg");*/
+}
+
+.iconText.icon-supportplan:before {
+    /*background-image: url("/img/iconsvg_supportplan.svg");*/
+}
+
+.iconText.icon-sales:before {
+    /*background-image: url("/img/iconsvg_sales.svg");*/
+}
+
+.pagettlWrap h1 .iconText {
+    line-height: 1.8;
+    padding-left: 2.0em;
+}
+
+.pagettlWrap h1 .iconText:before {
+    width: 1.8em;
+    height: 1.8em;
+    background-size: 1.4em auto;
+}
+
+/**.pager******/
+.pagerArea {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.pagerArea .pagerBox {
+    text-align: center;
+}
+
+.pagerArea .pagerBox li {
+    display: inline-block;
+}
+
+.pagerArea .pagerBox li .pagerBtn {
+    border: var(--btn-basic) solid 1px;
+    border-radius: 4px;
+    display: block;
+    padding: 0em 0.75em;
+    line-height: 2;
+    color: #004081;
+    background-color: #ffffff;
+    text-decoration: none;
+}
+
+.pagerArea .pagerBox li .pagerBtn:hover {
+    border: var(--btn-basic) solid 1px;
+    color: white;
+    background-color: var(--btn-basic);
+}
+
+.pagerArea .pagerBox li .pagerBtn.currentMark {
+    background-color: var(--btn-basic);
+    color: #ffffff;
+    pointer-events: none;
+}
+
+/********モーダル************/
+body.fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+.modal {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3001;
+}
+
+.modal__bg {
+    background: rgba(30, 30, 30, 0.8);
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    left: 0;
+}
+
+.modal__bg.loading {
+    /*background: url("/img/icon_modal_loading.gif") fixed center no-repeat rgba(30, 30, 30, 0.8);*/
+}
+
+.modal__content {
+    background: #f0f0f0;
+    left: 50%;
+    padding: 20px 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    overflow: auto;
+    max-height: 85vh;
+    display: none;
+}
+
+.modalInner {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.modalTitle {
+    padding: 10px;
+    background-color: rgb(163, 163, 163);
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+a.modalCloseBtn,
+input.modalCloseBtn {
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #3a4549;
+    padding: 0.5em 0;
+    border-radius: 4px;
+    margin: 1em auto 0;
+    width: 200px;
+
+}
+
+.modalCloseBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    border: red;
+    color: white;
+    font-size: 20px;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+a.modalCloseBtn:hover,
+input.modalCloseBtn:hover {
+    background-color: #6a7f86;
+}
+
+.modal.modalLs .modal__content {
+    width: 96%;
+}
+
+.modal.modalLs .modal__content .modalInner {
+    width: 96%;
+    min-width: 1000px;
+}
+
+.modal.modalSs .modal__content {
+    width: 25%;
+}
+
+/********タブ切替************/
+.tab_wrap {
+    width: 100%;
+    margin: 2em auto;
+    border-bottom: #8b9cac solid 4px;
+}
+
+.tab_wrap input.hiddenInput[type="radio"] {
+    display: none;
+}
+
+.tab_wrap .tab_area {
+    background-color: #8b9cac;
+    border-radius: 5px 5px 0 0;
+    padding-top: 0.5em;
+}
+
+.tab_wrap .tab_area label {
+    font-weight: bold;
+    width: auto;
+    margin: 0 0em 0 0.5em;
+    min-width: 4em;
+    display: inline-block;
+    padding: 0.5em 0.5em;
+    color: #f0f0f0;
+    background: #a1b0be;
+    text-align: center;
+    cursor: pointer;
+    /*transition:ease 0.2s opacity;*/
+    /*border: #cccccc solid 1px;*/
+    border-bottom: #8b9cac solid 2px;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab_wrap .tab_area label:hover {
+    background: #49739b;
+}
+
+.tab_wrap .panel_area {
+}
+
+.tab_wrap .tab_panel {
+    width: 100%;
+    padding: 0em 0 1em;
+    display: none;
+}
+
+.tab_wrap #tab1:checked ~ .tab_area .tab1_label,
+.tab_wrap #tab2:checked ~ .tab_area .tab2_label,
+.tab_wrap #tab3:checked ~ .tab_area .tab3_label,
+.tab_wrap #tab4:checked ~ .tab_area .tab4_label,
+.tab_wrap #tab5:checked ~ .tab_area .tab5_label,
+.tab_wrap #tab6:checked ~ .tab_area .tab6_label {
+    background-color: #eaedef;
+    color: #333333;
+    border-bottom: #eaedef solid 6px;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+.tab_wrap #tab1:checked ~ .panel_area #panel1,
+.tab_wrap #tab2:checked ~ .panel_area #panel2,
+.tab_wrap #tab3:checked ~ .panel_area #panel3,
+.tab_wrap #tab4:checked ~ .panel_area #panel4,
+.tab_wrap #tab5:checked ~ .panel_area #panel5,
+.tab_wrap #tab6:checked ~ .panel_area #panel6 {
+    display: block;
+}
+
+/********************
+.入力フォームリスト
+*********************/
+/**.入力フォームリスト/基本情報（氏名生年月日所属）**/
+.basicinfoWrap {
+    margin-top: 1rem;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.basicinfoWrap > table {
+    width: 100%;
+    background-color: #004081;
+    border: #004081 solid 1px;
+}
+
+.basicinfoWrap > table th,
+.basicinfoWrap > table td {
+    color: #ffffff;
+}
+
+.basicinfoWrap > table th {
+    width: 10%;
+    background-color: #ffffff;
+    color: #333333;
+    font-weight: bold;
+
+}
+
+.basicinfoWrap > table td {
+    width: 20.33333%;
+    padding: 0.25em 0.25em 0.25em 0.5em;
+}
+
+/**.入力フォームリスト/ページ送りボタン**/
+.buttonlistWrap.pagejumpBtn {
+    margin: 2rem auto 0;
+    display: block;
+    width: 70%;
+    overflow: hidden;
+}
+
+.buttonlistWrap.pagejumpBtn li {
+    margin: 0 0 0.6%;
+    display: block;
+    padding-right: 0.6%;
+    width: 49.7%;
+    float: left;
+}
+
+.buttonlistWrap.pagejumpBtn li > a,
+.buttonlistWrap.pagejumpBtn li > input {
+    width: 100%;
+}
+
+.buttonlistWrap.pagejumpBtn li:nth-child(2n) {
+    padding-right: 0;
+}
+
+.buttonlistWrap.pagejumpBtn li:last-child {
+    padding-right: 0;
+}
+
+.buttonlistWrap.pagejumpBtn a,
+.buttonlistWrap.pagejumpBtn input {
+    display: inline-block;
+    box-sizing: border-box;
+    color: #333333;
+    text-decoration: none;
+    border: #88A2DB solid 1px;
+    background-color: #ffffff;
+    padding: 0.5em 0.65em 0.5em 0.5em;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.buttonlistWrap.pagejumpBtn a:hover,
+.buttonlistWrap.pagejumpBtn input:hover {
+    background-color: #D7E5F4;
+}
+
+.buttonlistWrap.pagejumpBtn .iconText:before {
+    width: 3.4em;
+}
+
+.buttonlistWrap.pagejumpBtn .current {
+    pointer-events: none;
+    color: #ffffff;
+    background-color: #88A2DB;
+}
+
+.buttonlistWrap.pagejumpBtn.transfermenu {
+    width: 100%;
+}
+
+.buttonlistWrap.pagejumpBtn.transfermenu li {
+    padding-right: 0.4%;
+    width: 24.7%;
+}
+
+.buttonlistWrap.pagejumpBtn.transfermenu li:nth-child(2n) {
+    padding-right: 0.4%;
+}
+
+.buttonlistWrap.pagejumpBtn.transfermenu li:nth-child(4n) {
+    padding-right: 0;
+}
+
+/******/
+.buttonlistWrap.outputBtnlist {
+    display: block;
+    overflow: hidden;
+    width: 1200px;
+    margin-top: 0;
+}
+
+.buttonlistWrap.outputBtnlist > li {
+    display: inline-block;
+    float: none;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 232px;
+}
+
+.buttonlistWrap.outputBtnlist > li:nth-child(5n) {
+    padding-right: 0px;
+}
+
+.buttonlistWrap.outputBtnlist > li:nth-child(n+6) {
+    padding-bottom: 0px;
+}
+
+.buttonlistWrap.outputBtnlist > li > a {
+    letter-spacing: 0;
+}
+
+/**.入力フォームリスト/フォームエリア**/
+
+.tableWrap.borderLesstable.inputFormArea .tableBasic tr > th,
+.tableWrap.borderLesstable.inputFormArea .tableBasic tr > td {
+    padding: 0 0 20px 0;
+}
+
+.inputFormArea .formsetBox {
+    width: 100%;
+    overflow: visible;
+}
+
+.inputFormArea .formsetBox:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.inputFormArea .formsetBox > dt,
+.inputFormArea .formsetBox > dd {
+    position: relative;
+    margin-top: 0.5em;
+    float: none;
+    width: auto;
+}
+
+.inputFormArea .formsetBox > dt::before {
+    position: absolute;
+    top: 0.3em;
+    left: 0.1em;
+    display: inline-block;
+    content: '';
+    box-sizing: border-box;
+    z-index: 1;
+    border-radius: 20px;
+    background-color: var(--spanish-blue);
+    width: 10px;
+    height: 10px;
+}
+
+.inputFormArea .formsetBox > dt {
+    padding: 0em 0em 0em 1em;
+    font-weight: bold;
+    clear: both;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+.inputFormArea .formsetBox > dd {
+    display: block;
+}
+
+.tableWrap.borderLesstable.inputFormArea .buttonlistWrap {
+    margin: 2em auto 0;
+}
+
+.tableWrap.borderLesstable.inputFormArea .buttonlistWrap a.buttonBasic,
+.tableWrap.borderLesstable.inputFormArea .buttonlistWrap input.buttonBasic {
+    /*
+    padding: 1em 0.65em 1em 0.75em;
+    */
+}
+
+/**.入力フォームリスト/ポストボックス*/
+.formpostBox {
+    display: inline-block;
+    box-sizing: border-box;
+    font-family: 'Arial', 'Helvetica Neue', 'Helvetica', 'Yu Gothic Medium', 'YuGothic', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    color: #333333;
+    letter-spacing: 0em;
+    border: #eaeaea solid 1px;
+    background-color: #fafafa;
+    border-radius: 6px;
+    line-height: 1.3;
+    padding: 0.4em 0.4em;
+}
+
+.formpostBoxTime {
+    display: inline-block;
+    box-sizing: border-box;
+    font-family: 'Arial', 'Helvetica Neue', 'Helvetica', 'Yu Gothic Medium', 'YuGothic', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    color: #333333;
+    letter-spacing: 0em;
+    border: #aaaaaa solid 1px;
+    background-color: #fafafa;
+    border-radius: 6px;
+    line-height: 1.3;
+    padding: 0.3em 2.4em 0.22em 0.6em;
+}
+
+.formpostBoxTime.disabled {
+    background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3));
+    border: #eaeaea solid 1px;
+    color: #cccccc;
+}
+
+/**.入力フォームリスト/必須マーク*/
+
+.inputFormArea .formsetBox > dt.requiredForm,
+.formsetBox > dt.requiredForm {
+    position: relative;
+    padding: 0em 3em 0em 1em;
+}
+
+.formsetBox > dt.requiredForm:after {
+    content: "必須";
+    display: inline-block;
+    position: absolute;
+    right: 0em;
+    top: 0;
+    padding: 0em 0.5em;
+    border-radius: 2px;
+    background-color: #ff8800;
+    color: #fff;
+    font-weight: normal;
+    font-size: 80%;
+    line-height: 1.6;
+}
+
+.helpBalloonBtn {
+    display: inline-block;
+    /*border: 1px solid #09b67c;*/
+    margin-left: 0.5em;
+    line-height: 1em;
+    width: 1em;
+    padding: 3px 2px 1px 2px;
+    background-color: #a8b9b9;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+/**.入力フォームリスト/ヘルプ吹き出し*/
+.helpBalloon {
+    display: none;
+    width: 500px;
+    margin-bottom: 0.25em;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    padding: 0.25em 0.5em;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #333333;
+    border: #333333 solid 1px;
+}
+
+.helpBalloonBtn:hover + .helpBalloon {
+    display: inline-block;
+}
+
+/**.入力フォームリスト/グループかして囲う*/
+.multiple-formBox {
+    border: #e0e0e0 solid 1px;
+    border-radius: 4px;
+    background-color: #fafafa;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+.formsetBox.multiple-formBox > dt:nth-child(n+3),
+.formsetBox.multiple-formBox > dd:nth-child(n+4) {
+    margin-top: 0.5em;
+}
+
+.inputFormArea .formsetBox > dd.innerbtnbox {
+    width: 100%;
+    text-align: center;
+}
+
+.inputFormArea .formsetBox.multiple-formBox > dt {
+    /*border-left: #00d180 solid 4px;*/
+    margin-top: calc(1em + 20px);
+}
+
+.inputFormArea .formsetBox.multiple-formBox > dt:first-child {
+    margin-top: 0.5em;
+}
+
+/**.入力フォームリスト/更新履歴*/
+.changeLogWrap {
+    width: 100%;
+    margin-top: 0.5rem;
+    background-color: #ffffff;
+    border: #e0e0e0 solid 1px;
+    padding: 0.75em 2em 0.75em 2em;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    height: 8rem;
+}
+
+.active + .changeLogWrap {
+    height: auto;
+}
+
+.changeLogWrap > table {
+    width: 100%;
+}
+
+.changeLogWrap > table tr th,
+.changeLogWrap > table tr td {
+    padding: 0.25em 0.5em 0.25em 0em;
+    box-sizing: border-box;
+}
+
+.changeLogWrap > table tr th {
+    font-weight: bold;
+    text-align: left;
+    border-bottom: #cccccc solid 2px;
+}
+
+.changeLogWrap > table tr td {
+    border-bottom: #cccccc dotted 1px;
+}
+
+
+.changeLogWrap.bikoSet > table tr:nth-child(2n+1) td {
+    border-bottom: #cccccc solid 1px;
+}
+
+.acTtl {
+    text-align: right;
+    margin-top: -2em;
+}
+
+.acTtl > a {
+    cursor: pointer;
+}
+
+.acTtl2_opclose {
+    display: none;
+}
+
+.acTtl2_opclose.active {
+    display: block;
+}
+
+/**/
+.aAct_opclose {
+}
+
+.aAct_opclose.active {
+}
+
+.accordionActiv {
+    position: relative;
+}
+
+.accordionActiv:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: #fff 2px solid;
+    border-right: #fff 2px solid;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    position: absolute;
+    right: 2%;
+    top: 0;
+    bottom: 15%;
+    margin: auto;
+}
+
+/*開いた状態の矢印描画*/
+.accordionActiv.active:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: #fff 2px solid;
+    border-right: #fff 2px solid;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 2%;
+    top: 7%;
+    bottom: 0;
+    margin: auto;
+}
+
+
+/**設問のインデント*******************/
+
+.inputFormArea .indentinq1 .formsetBox {
+    margin-left: 1em;
+    width: calc(100% - 1em);
+}
+
+.inputFormArea .indentinq1 .formsetBox > dt {
+    border-left: #00d180 solid 4px;
+}
+
+.inputFormArea .indentinq2 .formsetBox {
+    margin-left: 2em;
+    width: calc(100% - 2em);
+}
+
+.inputFormArea .indentinq2 .formsetBox > dt {
+    border-left: #00d180 solid 4px;
+}
+
+.inputFormArea .indentinq3 .formsetBox {
+    margin-left: 3em;
+    width: calc(100% - 3em);
+}
+
+.inputFormArea .indentinq3 .formsetBox > dt {
+    border-left: #00d180 solid 4px;
+}
+
+/*************************************
+リストテーブル（検索）
+*************************************/
+/*リストテーブル（検索）/スタイル*/
+.list-table {
+}
+
+.list-table tr:nth-child(2n) > td {
+    background-color: #f8f8f8;
+}
+
+.list-table tr.active:nth-child(2n) > td {
+    background-color: #8cb7f7bc;
+}
+.list-table tr.active > td {
+    background-color: #8cb7f7bc;
+}
+
+.searchnumberArea {
+    margin-top: 0.5rem;
+}
+
+.searchnumberArea .realnumber {
+    font-size: 110%;
+    font-weight: bold;
+}
+
+/*リストテーブル（検索）/テーブル内リンク*/
+.list-table tr > td.listinner-link {
+    /*cursor: pointer;
+	background-color: #fff6d3;*/
+}
+
+/*
+.list-table tr > td.listinner-link:hover{
+	background-color: #fff6d3;
+}
+*/
+.list-table tr > td .listinner-linktext,
+.shift-table tr > td .listinner-linktext {
+    display: block;
+    color: #333333;
+    border: #b9dcdd solid 1px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    padding: 2px 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.list-table tr > td .listinner-linktext:hover,
+.shift-table tr > td .listinner-linktext:hover {
+    background-color: #defeff;
+}
+
+.list-table tr > td .listinner-linktext.bgc-ph {
+    /*公休*/
+    background-color: #e4a4a4;
+    border-color: #aaaaaa;
+}
+
+.list-table tr > td .listinner-linktext.bgc-out {
+    /*外就*/
+    background-color: #94d5e1;
+    border-color: #aaaaaa;
+}
+
+.list-table tr > td .listinner-linktext.bgc-in {
+    /*内勤*/
+    background-color: #dbe6a5;
+    border-color: #aaaaaa;
+}
+
+.list-table tr > td .listinner-linktext.bgc-ph:hover {
+    background-color: #e49797;
+}
+
+.list-table tr > td .listinner-linktext.bgc-out:hover {
+    background-color: #7fc8d5;
+}
+
+.list-table tr > td .listinner-linktext.bgc-in:hover {
+    background-color: #c8d77e;
+}
+
+.list-table tr > td .listinner-linktext.bgc-warning {
+    background-color: #c91111;
+    color: #ffffff;
+}
+
+.list-table tr > td .listinner-linktext.bgc-warning:hover {
+    background-color: #ffe480;
+    color: #333333;
+}
+
+.list-table tr > td .listinner-wraptext,
+.shift-table tr > td .listinner-wraptext {
+    display: inline-block;
+    color: #333333;
+    border: #b9deb9 solid 1px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 2px 6px;
+}
+
+.list-table tr > td .corpname {
+    color: #666666;
+    font-size: 90%;
+}
+
+/*リストテーブル（検索）/テーブル内ソートボタン*/
+.tableWrap.bordertable .tableBasic tr > th.list-sortbtn {
+    position: relative;
+    cursor: pointer;
+    padding: 12px 0.25em 12px;
+}
+
+.tableWrap.bordertable {
+    padding: 30px 30px;
+}
+
+.tableWrap.bordertable .tableBasic tr > th.list-sortbtn:hover,
+.tableWrap.bordertable .tableBasic tr > th.list-sortbtn.sortup:hover,
+.tableWrap.bordertable .tableBasic tr > th.list-sortbtn.sortdown:hover {
+    background-color: #ffd435;
+}
+
+.tableWrap.bordertable .tableBasic tr > th.list-sortbtn,
+.tableWrap.bordertable .tableBasic tr > th.list-sortbtn.sortup,
+.tableWrap.bordertable .tableBasic tr > th.list-sortbtn.sortdown {
+    background-color: #ffe480;
+}
+
+.tableWrap.bordertable .tableBasic tr > th.list-sortbtn.sortup:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0;
+    border-bottom: solid 2px #007dfc;
+    border-right: solid 2px #007dfc;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -4px;
+    transform: rotate(-135deg);
+}
+
+.tableWrap.bordertable .tableBasic tr > th.list-sortbtn.sortdown:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0;
+    border-bottom: solid 2px #007dfc;
+    border-right: solid 2px #007dfc;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    margin-left: -4px;
+    transform: rotate(45deg);
+}
+
+.listconditions-ttl {
+    display: block;
+    background-color: #222222;
+    border-radius: 1em;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0.2em 0.65em 0.2em 0.75em;
+    letter-spacing: 0.1em;
+}
+
+.calendar-plugin {
+    position: relative;
+    /*width: 320px!important;*/
+}
+
+.calendar-plugin::after {
+    content: "";
+    position: absolute;
+    top: 0.3em;
+    right: 0.5em;
+    margin: auto;
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+    /*background-image: url(/images/icons/iconsvg_calendar_w.svg);*/
+    background-size: 1.3em auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.calendar-plugin input {
+    /*
+    position: relative;
+    width: 320px;
+    height: 1.5em;
+    margin: 0 auto;
+    outline: none;
+    */
+}
+
+.tableBasic tr > td > .innersetwrap.woartypeBox {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.tableBasic tr > td > .innersetwrap.woartypeBox > li {
+    display: block;
+    float: left;
+    padding-right: 0.5em;
+    width: 5em;
+    vertical-align: middle;
+}
+
+.tableBasic tr > td > .innersetwrap.woartypeBox > li:last-child {
+    padding-right: 0em;
+}
+
+.formsetBox > dd.s-kubun .formPack {
+    /*margin-bottom: 0.5em;*/
+}
+
+.formsetBox > dd.s-kubun .formPack.lineobj04 {
+    width: 24%;
+}
+
+.formsetBox > dd.s-kubun .formPack.lineobj03 {
+    width: 30%;
+}
+
+.formsetBox > dd.s-kubun .formPack.lineobj02 {
+    width: 48%;
+}
+
+.formsetBox > dd.s-kubun .formPack.lineobj01 {
+    width: 97%;
+}
+
+/*.inbtnlist*/
+
+.inbtnlist > a {
+    margin-right: 0.5em;
+}
+
+.inbtnlist > a:last-child {
+    margin-right: 0em;
+}
+
+/*********************************
+ページ内メニュー
+*********************************/
+.pagemenuWrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.pagemenuWrap > li {
+    float: left;
+    width: 24.4%;
+    margin-right: 0.8%;
+    border: #54b108 solid 1px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin-bottom: 0.8em;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.pagemenuWrap > li:nth-child(4n) {
+    margin-right: 0%
+}
+
+.pagemenuWrap > li:last-child {
+    margin-right: 0%
+}
+
+.pagemenuWrap .pagemenuTtl {
+    background-color: #c8eaac;
+    padding: 0.25em;
+}
+
+.pagemenuWrap .pagemenuDoc {
+    background-color: #e7f2dd;
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    font-size: 90%;
+    line-height: 1.3;
+}
+
+.pagemenuWrap .pagemenuLinklist {
+}
+
+.pagemenuWrap .pagemenuLinklist > li {
+}
+
+.pagemenuWrap .pagemenuLinklist > li a {
+    display: block;
+    padding: 0.25em 0.5em 0.25em 0.25em;
+    position: relative;
+    text-decoration: none;
+
+}
+
+.pagemenuWrap .pagemenuLinklist > li a::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0;
+    border-top: solid 2px #1498a6;
+    border-right: solid 2px #1498a6;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -4px;
+    transform: rotate(45deg);
+}
+
+.pagemenuWrap .pagemenuLinklist > li a:hover {
+    color: #ffffff;
+    background-color: #1498a6;
+}
+
+.pagemenuWrap .pagemenuLinklist > li a:hover::after {
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+}
+
+/*********************************
+ページミニメニュー（2階層目）
+*********************************/
+.pageminimenuWrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.pageminimenuWrap > li {
+    float: left;
+    width: 24.4%;
+    margin-right: 0.8%;
+    border: #54b108 solid 1px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin-bottom: 0.8em;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.pageminimenuWrap > li:nth-child(4n) {
+    margin-right: 0%
+}
+
+.pageminimenuWrap > li:last-child {
+    margin-right: 0%
+}
+
+.pageminimenuWrap .pagemenuLink {
+}
+
+.pageminimenuWrap .pagemenuLink > a {
+    display: block;
+    padding: 0.5em 1em 0.5em 0.5em;
+    position: relative;
+    text-decoration: none;
+    line-height: 1.3;
+}
+
+.pageminimenuWrap .pagemenuLink > a::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0;
+    border-top: solid 2px #1498a6;
+    border-right: solid 2px #1498a6;
+    position: absolute;
+    top: 50%;
+    right: 0.75em;
+    margin-top: -4px;
+    transform: rotate(45deg);
+}
+
+.pageminimenuWrap .pagemenuLink > a:hover {
+    color: #ffffff;
+    background-color: #1498a6;
+}
+
+.pageminimenuWrap .pagemenuLink > a:hover::after {
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+}
+
+.pageminimenuWrap .pagemenuDoc {
+    background-color: #e7f2dd;
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    font-size: 90%;
+    line-height: 1.3;
+}
+
+/*********************************
+ページ内コンテンツメニュー
+*********************************/
+
+.contentmenuWrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.contentmenuWrap > li {
+    float: left;
+    width: 24.4%;
+    margin-right: 0.8%;
+    border: #004081 solid 1px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin-bottom: 0.8em;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.contentmenuWrap > li:nth-child(4n) {
+    margin-right: 0%
+}
+
+.contentmenuWrap > li:last-child {
+    margin-right: 0%
+}
+
+.contentmenuWrap .contentmenuLink {
+}
+
+.contentmenuWrap .contentmenuLink > a {
+    display: block;
+    position: relative;
+    padding: 0.25em 1em 0.25em 0.25em;
+    color: #ffffff;
+    background-color: #004081;
+}
+
+.contentmenuWrap .contentmenuLink > a:hover {
+    background-color: #3e92e7;
+}
+
+.contentmenuWrap .contentmenuLink > a::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -4px;
+    transform: rotate(45deg);
+}
+
+.contentmenuWrap .contentmenuDoc {
+    background-color: #dde9f2;
+    padding: 0.25em 0.25em 0.25em 0.25em;
+    font-size: 90%;
+    line-height: 1.3;
+}
+
+.contentmenuWrap .contentmenuNotelist {
+    padding: 0 0.25em 0.25em;
+}
+
+.contentmenuWrap .contentmenuNotelist > li {
+    margin-top: 0.25em;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.contentmenuWrap .contentmenuNotelist > li span {
+    display: block;
+    padding: 0.25em 0.5em 0.25em 0.25em;
+    position: relative;
+    text-decoration: none;
+    background-color: #dd0000;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.contentmenuWrap .contentmenuNotelist > li span.infoLv1 {
+    background-color: #dd0000;
+    color: #ffffff;
+}
+
+.contentmenuWrap .contentmenuNotelist > li span.infoLv2 {
+    background-color: #4e9ed7;
+    color: #ffffff;
+}
+
+.contentmenuWrap .contentmenuNotelist > li span.infoLv3 {
+    background-color: #f0f0f0;
+    color: #323232;
+}
+
+/*********************************
+fixbtn
+*********************************/
+.fixed-btn-area {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/*********************************
+フォーム内のテーブル枠
+*********************************/
+.forminner-minTable {
+    width: 100%;
+}
+
+.tableWrap.borderLesstable.inputFormArea .tableBasic .forminner-minTable tr > td {
+    padding: 0.5rem 0rem 0rem 0;
+    text-align: right;
+}
+
+/*********************************
+カラム分けラッパー
+*********************************/
+.columnWrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.columnWrap.divide2 > li {
+    float: left;
+    width: calc(50% - 0.5rem);
+    margin-right: 1rem;
+}
+
+.columnWrap.divide2 > li:last-child {
+    margin-right: 0rem;
+}
+
+.columnWrap.divide2-1200 > li {
+    float: left;
+    width: calc(40% - 0.5rem);
+    margin-right: 1rem;
+}
+
+.columnWrap.divide2-1200 > li:last-child {
+    width: calc(60% - 0.5rem);
+    margin-right: 0rem;
+}
+
+/*********************************
+disabledで薄くする
+*********************************/
+.disabledBox:disabled {
+    background-color: #dddddd;
+    cursor: default;
+}
+
+.formsetBox > dt.disttl {
+    color: #dddddd;
+}
+
+.formpPack.distxt,
+.formsetBox .distxt {
+    color: #dddddd;
+}
+
+.totalTimebox {
+    background-color: #ffdd87;
+}
+
+.totalTimebox .formsetBox > dt {
+}
+
+/*============================================================
+* ダッシュボード　お知らせ
+*============================================================*/
+.news-area {
+    margin-top: 0.5rem;
+    width: calc(100% - 30px);
+    padding: 13px 13px 13px 13px;
+    overflow-y: scroll;
+    height: 8em;
+    background-color: #f9f9f9;
+}
+
+.active + .news-area {
+    height: auto;
+}
+
+.news-date {
+    float: left;
+    padding-left: 1.5em;
+    width: 6em;
+    line-height: 2;
+    /*background-image: url(/img/icon-info.png);*/
+    background-repeat: no-repeat;
+    background-size: 1.5em auto;
+    background-position: left center;
+    clear: both;
+}
+
+.news-contents {
+    float: left;
+    margin-left: 1em;
+    width: calc(100% - 8.5em);
+}
+
+.news-content-wrap.attention .news-date {
+    /*background-image: url(/img/icon-info-attention.png);*/
+    color: #e82d27;
+}
+
+.news-content-wrap.attention .news-contents {
+    color: #e82d27;
+}
+
+.news-content-wrap .indent {
+    text-indent: -1em;
+    padding-left: 1em;
+}
+
+/*============================================================
+カードリーダー
+*============================================================*/
+
+.cardwrap {
+    /*margin-bottom: 30px;*/
+}
+
+.cardwrap .btn.blue {
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007dfc;
+    padding: 1em 2em 1em 2em;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    line-height: 1.3;
+    border: none;
+    cursor: pointer;
+}
+
+.cardwrap .btn.blue:hover {
+    background-color: #399bff;
+}
+
+.card-number-form.input-text {
+    width: 50%;
+}
+
+.cardwrap .open-number {
+    text-align: center;
+    color: #14acc3;
+    font-weight: bold;
+}
+
+.form-supplementary {
+    box-sizing: border-box;
+    padding-left: 1em;
+    color: #14acc3;
+    font-weight: normal;
+
+}
+
+.cardContentWrap .form-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 13px 0 13px 0;
+}
+
+.cardContentWrap .cardnum-form {
+    justify-content: center;
+}
+
+.cardContentWrap .add-btn-box {
+    font-size: 16px;
+    display: inline-block;
+    margin-left: 1em;
+    vertical-align: middle;
+}
+
+.cardContentWrap .branch-btn-box {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.cardContentWrap .branch-btn-box > input {
+    width: 100%;
+}
+
+.cardContentWrap .branch-btn-box > input:disabled {
+    background-color: #dcdcdc;
+    cursor: default;
+}
+
+/****支援計画制作フロー************/
+
+.flowWrap {
+    margin-bottom: 2em;
+}
+
+.flowWrap > dl {
+    overflow: hidden;
+    border: #cccccc solid 1px;
+    padding: 0.5em 0em 0.5em 3em;
+    background-color: #f0f0f0;
+    line-height: 1.2;
+}
+
+.flowWrap > dl > dt,
+.flowWrap > dl > dd {
+    float: left;
+    display: inline-block;
+
+}
+
+.flowWrap > dl > dt {
+    padding: 0 0em 0 0em;
+    font-weight: bold;
+    margin-right: 3em;
+    line-height: 3.25em;
+}
+
+.flowWrap > dl > dd {
+    width: 13em;
+    padding: 0.4em 1em;
+    background-color: #cccccc;
+    color: #777777;
+    margin-right: 3em;
+    position: relative;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.flowWrap > dl > dd.conpflow {
+    color: #333333;
+    background-color: #93d5e9;
+}
+
+.flowWrap > dl > dd .uptime {
+    width: 8em;
+    display: block;
+    margin: 0.1em auto 0;
+    background-color: #f0f0f0;
+    border-radius: 1em;
+}
+
+.flowWrap > dl > dd::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0;
+    border-top: solid 2px #cccccc;
+    border-right: solid 2px #cccccc;
+    position: absolute;
+    top: 50%;
+    right: -1.75em;
+    margin-top: -4px;
+    transform: rotate(45deg);
+}
+
+.flowWrap > dl > dd.conpflow::after {
+    border-top: solid 2px #3daed1;
+    border-right: solid 2px #3daed1;
+}
+
+.flowWrap > dl > dd:last-child::after {
+    content: none;
+}
+
+/****************/
+
+/******** 一括ボタンの非活性化 ********/
+a.buttonBasic.btn-disabled,
+input.buttonBasic.btn-disabled {
+    pointer-events: none;
+    background-color: #cccccc;
+    color: #e0e0e0;
+    border: #aaaaaa solid 1px;
+}
+
+/****チェックボタン（承認）の見た目でラジオとチェック*******************************
+labelにinputBtnstyle
+**************************************************************/
+.inputBtnstyle {
+    word-break: break-all;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+}
+
+label.inputBtnstyle input[type="radio"],
+label.inputBtnstyle input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+label.inputBtnstyle span.inputButton {
+    display: inline-block;
+    box-sizing: border-box;
+    color: #909090;
+    text-align: center;
+    text-decoration: none;
+    background-color: #d1dfed;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    line-height: 1.3;
+    padding: 0.2em 0.65em 0.2em 2em;
+}
+
+label.inputBtnstyle span.inputButton:hover {
+    background-color: #a4cffb;
+}
+
+label.inputBtnstyle input[type="radio"] + span.inputButton::before,
+label.inputBtnstyle input[type="checkbox"] + span.inputButton::before {
+    border: 4px solid #e5eaef;
+    border-width: 0 3px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: -0em 0em 0em 1em;
+    width: 0.5em;
+    height: 0.9em;
+    position: absolute;
+    top: 0em;
+    left: 0;
+    display: inline-block;
+    content: '';
+    box-sizing: border-box;
+}
+
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton {
+    color: #ffffff;
+    background-color: #00c4cc;
+}
+
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton:hover,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton:hover {
+    background-color: #149da3;
+}
+
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton::before,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton::before {
+    border: 4px solid #ffcc00;
+    border-width: 0 3px 4px 0;
+}
+
+/**日付を入れる.checkDaybox**/
+label.inputBtnstyle span.inputButton.checkDaybox {
+    padding: 0.2em 0.65em 0.2em 0.65em;
+    width: 14em;
+}
+
+label.inputBtnstyle span.inputButton.checkDaybox .checkDay {
+    display: block;
+    text-align: center;
+}
+
+label.inputBtnstyle input[type="radio"] + span.inputButton.checkDaybox::before,
+label.inputBtnstyle input[type="checkbox"] + span.inputButton.checkDaybox::before {
+    border-width: 0px 5px 6px 0;
+    margin: -1em 0em 0em 1em;
+    width: 0.9em;
+    height: 1.5em;
+}
+
+/**ステータス用.checkStatus**/
+label.inputBtnstyle span.inputButton.checkStatus {
+    padding: 1em 0.5em 0.2em 2em;
+    width: 9em;
+    height: 3em;
+}
+
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton.checkStatus,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton.checkStatus {
+    background-color: #007dfc;
+}
+
+label.inputBtnstyle input[type="radio"] + span.inputButton.checkStatus::before,
+label.inputBtnstyle input[type="checkbox"] + span.inputButton.checkStatus::before {
+    border-width: 0px 5px 6px 0;
+    margin: -0.5em 0em 0em 0.8em;
+    width: 0.9em;
+    height: 1.5em;
+}
+
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton.checkStatus:hover,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton.checkStatus:hover {
+    background-color: #6b8fdf;
+}
+
+/*2行*/
+label.inputBtnstyle span.inputButton.checkStatus.twolines {
+    padding: 0.2em 0.5em 0.2em 2em;
+}
+
+label.inputBtnstyle input[type="radio"] + span.inputButton.checkStatus.twolines::before,
+label.inputBtnstyle input[type="checkbox"] + span.inputButton.checkStatus.twolines::before {
+    margin: -0.9em 0em 0em 0.8em;
+}
+
+/*色1*/
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton.checkStatus.cbColor-ok,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton.checkStatus.cbColor-ok {
+    background-color: #00c4cc;
+}
+
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton.checkStatus.cbColor-ok:hover,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton.checkStatus.cbColor-ok:hover {
+    background-color: #149da3;
+}
+
+/*色2*/
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton.checkStatus.cbColor-ng,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton.checkStatus.cbColor-ng {
+    background-color: #e12525;
+}
+
+label.inputBtnstyle input[type="radio"] + span.inputButton.checkStatus.cbColor-ng::before,
+label.inputBtnstyle input[type="checkbox"] + span.inputButton.checkStatus.cbColor-ng::before {
+    border-width: 0 5px 0 0;
+}
+
+label.inputBtnstyle input[type="radio"] + span.inputButton.checkStatus.cbColor-ng::after,
+label.inputBtnstyle input[type="checkbox"] + span.inputButton.checkStatus.cbColor-ng::after {
+    border: 4px solid #e5eaef;
+    border-width: 0 0px 5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: -0em 0em 0em 0.8em;
+    width: 1.5em;
+    height: 0.6em;
+    position: absolute;
+    top: 0em;
+    left: 0;
+    display: inline-block;
+    content: '';
+    box-sizing: border-box;
+}
+
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton.checkStatus.cbColor-ng:hover,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton.checkStatus.cbColor-ng:hover {
+    background-color: #ff0000;
+}
+
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton.checkStatus.cbColor-ng::before,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton.checkStatus.cbColor-ng::before,
+label.inputBtnstyle input[type="radio"]:checked + span.inputButton.checkStatus.cbColor-ng::after,
+label.inputBtnstyle input[type="checkbox"]:checked + span.inputButton.checkStatus.cbColor-ng::after {
+    border-color: #ffffff;
+}
+
+label.inputBtnstyle input[type="radio"]:disabled + span.inputButton,
+label.inputBtnstyle input[type="checkbox"]:disabled + span.inputButton {
+    pointer-events: none;
+    cursor: none;
+}
+
+.statusTag {
+    display: inline-block;
+    border: #dfdfdf solid 1px;
+    border-radius: 6px;
+    white-space: nowrap;
+    line-height: 1;
+    padding: 0.2em 0.6em;
+    margin: 0.1em;
+    background-color: #e9f2fb;
+}
+
+.statusTag.lostorderTag {
+    border: #dfdfdf solid 1px;
+    background-color: #fbe9e9;
+    color: #dd0000;
+}
+
+.list-table tr > td .listinner-linktext.workerRemBtn {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    text-align: center;
+    background-color: #a2b5d1;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.list-table tr > td .listinner-linktext.workerRemBtn:hover {
+    background-color: #dd5b5b;
+}
+
+/*承認ボタンごとにエラーを出す場合*/
+.formsetBox > dd.innererrorBox > .formPack {
+    vertical-align: top;
+}
+
+/**営業：活動履歴****************/
+.totallingArea {
+}
+
+.tableWrap.borderLesstable .tableBasic.totallingArea tr > th,
+.tableWrap.borderLesstable .tableBasic.totallingArea tr > td {
+    padding: 0.25rem 0.5rem 0.25rem 0;
+}
+
+.totallingArea .formsetBox > dt {
+    border-left: #5578c6 solid 4px;
+    width: 10em;
+}
+
+.totallingArea .formsetBox > dd {
+    padding: 0.15em 0.25em 0.15em 0.25em;
+    width: calc(100% - 10em);
+}
+
+.totallingArea .formsetBox.shortset > dt {
+    width: 8em;
+}
+
+.totallingArea .formsetBox.shortset > dd {
+    width: calc(100% - 8em);
+}
+
+.totallingArea .formsetBox > dd .totallingBox {
+    display: inline-block;
+    border: #cccccc solid 1px;
+    border-radius: 6px;
+    white-space: nowrap;
+    line-height: 1;
+    padding: 0.2em 0.2em;
+    background-color: #fafafa;
+}
+
+.totallingArea .formsetBox > dd .totallingBox.infogood {
+    color: #009900;
+    background-color: #f0fff0;
+}
+
+.totallingArea .formsetBox > dd .totallingBox.infobad {
+    color: #dd0000;
+    background-color: #fff0f0;
+}
+
+.totallingArea .formsetBox > dd .totallingBox .numbertype {
+    font-weight: bold;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+}
+
+.setScrolltable {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+/**画面切り替えボタン（利用者← →職員）****************/
+
+.buttonSwitchWrap {
+    margin-top: 1em;
+    text-align: center;
+}
+
+a.buttonSwitch {
+    display: inline-block;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #8b95a7;
+    padding: 0.2em 2em 0.2em 0.65em;
+    letter-spacing: 0em;
+    border-radius: 4px;
+
+    position: relative;
+    /* line-height:2em; */
+}
+
+a.buttonSwitch:after {
+    position: absolute;
+    right: 0.4em;
+    content: "";
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    /*background-image: url("/img/iconsvg_pageswitch_w.svg");*/
+    background-size: 1.5em auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+a.buttonSwitch:hover {
+    background-color: #a6b2c8;
+}
+
+a.buttonSwitch > span {
+    font-weight: bold;
+}
+
+/**リストテーブル内にインプットを入れる********/
+.listformsetBox {
+    width: 12.5rem;
+}
+
+.listformsetBox > .formPack {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.2em;
+}
+
+.listformsetBox > .formPack:last-child {
+    margin-right: 0em;
+}
+
+.listformsetBox > .formPack > input[type="time"] {
+    padding: 0.1em 0.2em;
+    line-height: 1;
+}
+
+a.buttonBasic.buttonSs.listInnertimeImp,
+input.buttonBasic.buttonSs.listInnertimeImp {
+    display: block;
+    width: 100%;
+    font-size: 10px;
+    margin-top: 0.1rem;
+    letter-spacing: 0.2em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+input.buttonBasic.buttonSs.listInnertimeImp:disabled {
+    background-color: #c3c3c3;
+}
+
+input.buttonBasic.buttonSs.listInnertimeImp:disabled:hover {
+    background-color: #c3c3c3;
+    cursor: default;
+}
+
+/**テーブル（.tableWrap.borderLesstable）丸ごと非活性**/
+.tableWrap.borderLesstable.Inputlock {
+    background-color: #cde9d9;
+    border: #54b108 solid 1px;
+}
+
+.tableWrap.borderLesstable.Inputlock input,
+.tableWrap.borderLesstable.Inputlock textarea,
+.tableWrap.borderLesstable.Inputlock select,
+.tableWrap.borderLesstable.Inputlock label,
+.tableWrap.borderLesstable.Inputlock a {
+    pointer-events: none;
+}
+
+/**減算項目 定員超過 日付を選択**/
+.tableWrap.borderLesstable .tableBasic .overcapacity tr > th,
+.tableWrap.borderLesstable .tableBasic .overcapacity tr > td {
+    padding: 0rem 0.0rem 0rem 0;
+    background-color: inherit;
+    line-height: 1;
+}
+
+.tableWrap.borderLesstable .tableBasic .overcapacity tr > th {
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+/*********************************************
+.disablCheckform 以下のinput（labelからradio,checkbox,text含む）,textarea,select
+*********************************************/
+.disablCheckform label.customCheck {
+    pointer-events: none;
+}
+
+.disablCheckform label.customCheck input[type="radio"] + span,
+.disablCheckform label.customCheck input[type="checkbox"] + span {
+    color: #cccccc;
+}
+
+.disablCheckform label.customCheck input[type="radio"] + span::before,
+.disablCheckform label.customCheck input[type="checkbox"] + span::before {
+    border-color: #f0f0f0;
+}
+
+.disablCheckform label.customCheck input[type="radio"]:checked + span::before {
+    border: #cccccc solid 2px;
+}
+
+.disablCheckform label.customCheck input[type="checkbox"]:checked + span::before {
+    border: #cccccc solid 2px;
+}
+
+.disablCheckform label.customCheck input[type="radio"]:checked + span::after {
+    background-color: #cccccc;
+}
+
+.disablCheckform label.customCheck input[type="checkbox"]:checked + span::after {
+    border: 4px solid #cccccc;
+}
+
+.disablCheckform select,
+.disablCheckform input,
+.disablCheckform textarea {
+    color: #cccccc;
+    border: #cccccc solid 1px;
+    pointer-events: none;
+}
+
+.disablCheckform label {
+    pointer-events: none;
+}
+
+/**集計ボックス**/
+.totallingBoxsWrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.totallingBoxsWrap > li {
+    float: left;
+    width: 24.85%;
+    margin-right: 0.2%;
+    border: #cccccc solid 1px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin-bottom: 0.2%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.totallingBoxsWrap > li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.totallingBoxsWrap > li > dl {
+    width: 100%;
+    overflow: hidden;
+}
+
+.totallingBoxsWrap > li > dl dt {
+    float: left;
+    width: 70%;
+    text-align: center;
+    background-color: #ededed;
+    border-right: #cccccc solid 1px;
+    box-sizing: border-box;
+}
+
+.totallingBoxsWrap > li > dl dd {
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+
+/**利用者経過記録 テキスト制作***/
+.templateMakebox {
+    border: #cccccc solid 1px;
+    padding: 0.25em 0.25em 0em;
+    border-radius: 6px;
+    background-color: #f0f0f0;
+    margin-top: 0.25em;
+}
+
+.templateMakebox .formPack.tempttl {
+    font-size: 0.9em;
+    line-height: 1.2;
+    margin-bottom: 0.25em;
+}
+
+.templateMakebox .formPack.tempinputbtn {
+    float: right;
+    margin-right: 0;
+}
+
+.templateMakebox .formPack {
+    margin-bottom: 0.25em;
+}
+
+.templateMakebox .formPack {
+    font-size: 0.9em;
+}
+
+.templateMakebox .formPack select {
+    font-size: 1em;
+}
+
+
+/**ヘッダー　ショートカットアイコンボタン***/
+.headerShortcut {
+    position: relative;
+    background-color: #ffffff;
+    width: 100%;
+    z-index: 1;
+    box-sizing: border-box;
+    border-bottom: #cccccc solid 1px;
+    border-radius: 0px 0px 0px 0px;
+    padding: 5px 20px 5px;
+}
+
+.headerShortcut.active {
+    padding: 2px 20px 0;
+}
+
+.headerShortcut.active .hscList {
+    height: 0;
+}
+
+.headerShortcut .hscTab {
+    background-color: #ffffff;
+    border-bottom: #cccccc solid 1px;
+    border-left: #cccccc solid 1px;
+    position: absolute;
+    bottom: -23px;
+    right: 0;
+    border-radius: 0px 0px 0px 6px;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 0 0.5em 0 1em;
+    box-sizing: border-box;
+}
+
+.headerShortcut .hscTab:hover {
+    background-color: #defeff;
+}
+
+.headerShortcut .hscTab .hscOpenclose {
+    color: #333333;
+    text-decoration: none;
+}
+
+.headerShortcut .hscList {
+    overflow: hidden;
+}
+
+.headerShortcut .hscList > li {
+    display: inline-block;
+    width: auto;
+}
+
+.headerShortcut .hscList > li a {
+    display: block;
+    background-color: #ffffff;
+    border: #aaaaaa solid 1px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 0 1px 0;
+    color: #303030;
+    text-decoration: none;
+    width: 60px;
+}
+
+.headerShortcut .hscList > li a:hover {
+    border: #00c4cc solid 1px;
+    background-color: #defeff;
+}
+
+.headerShortcut .hscList > li .hscIcon {
+    display: block;
+    margin: 0 auto;
+    width: 26px;
+    height: auto;
+}
+
+.headerShortcut .hscList > li .hscIcon img {
+    width: 100%;
+    height: auto;
+}
+
+.headerShortcut .hscList > li .hscIcontext {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    margin-top: 1px;
+}
+
+.headerShortcut .hscList > li .hscIcontext .txtdeco {
+    font-weight: bold;
+}
+
+.headerShortcut .hscList > li .hscIcontext .tcBlue {
+    color: #005CFF;
+}
+
+.headerShortcut .hscList > li .hscIcontext .tcOrange {
+    color: #ff9600;
+}
+
+.headerShortcut .hscList > li.menuttlbox {
+    padding-left: 25px;
+    box-sizing: border-box;
+    width: auto;
+    vertical-align: bottom;
+}
+
+.headerShortcut .hscList > li.menuttlbox:first-child {
+    padding-left: 0;
+}
+
+.headerShortcut .hscList > li.menuttlbox .menuttlboxInner {
+    line-height: 1.2em;
+    padding: 0.25em 0em 0.25em 0em;
+    font-size: 0.9em;
+}
+
+.headerShortcut .hscList > li.menuttlbox .menuttlboxInner.singleLine {
+    line-height: 2.4em;
+}
+
+.headerShortcut .hscList > li.menuttlbox .menuttlboxInner span {
+    font-weight: bold;
+}
+
+.headerShortcut .hscList.specialperiodMenu {
+    margin-top: 0.25em;
+}
+
+.headerShortcut .hscList.specialperiodMenu > li a {
+    background-color: #efbb90;
+}
+
+.headerShortcut .hscList.specialperiodMenu > li a:hover {
+    background-color: #ffa961;
+}
+
+.headerShortcut .hscList.specialperiodMenu > li.menuttlbox .menuttlboxInner {
+    border-left: #efbb90 solid 4px;
+}
+
+.headerShortcut.active .hscTab .hscOpenclose::before {
+    content: "ショートカットを開く";
+}
+
+.headerShortcut .hscTab .hscOpenclose::before {
+    content: "ショートカットを閉じる";
+}
+
+
+/***一覧*****************/
+
+.userreportlistWrap {
+    margin-bottom: 1em;
+    overflow: hidden;
+}
+
+.userreportlistWrap > li {
+    background-color: #FFFFFF;
+    border: #c0c0c0 solid 1px;
+    border-radius: 4px;
+    padding: 0.5em;
+    line-height: 1.3;
+    margin-bottom: 1em;
+
+    float: left;
+    width: 24.1%;
+    margin-right: 1.2%;
+    box-sizing: border-box;
+}
+
+.userreportlistWrap > li:nth-child(4n) {
+    margin-right: 0%;
+}
+
+.userreportlistWrap > li:last-child {
+    margin-bottom: 0em;
+}
+
+.userreportlistWrap > li ul {
+    overflow: hidden;
+}
+
+.userreportlistWrap > li ul li {
+    margin-bottom: 0.25em;
+}
+
+.userreportlistWrap > li ul li:last-child {
+    margin-bottom: 0em;
+}
+
+.userreportlistWrap > li ul li.pnnumBox {
+    float: left;
+}
+
+.userreportlistWrap > li ul li.employmentBox {
+    text-align: right;
+}
+
+.userreportlistWrap > li ul li.usernameBox {
+    clear: both;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.userreportlistWrap > li ul li.freetext {
+}
+
+.userreportlistWrap > li ul li a.buttonBasic.buttonSs,
+.userreportlistWrap > li ul li input.buttonBasic.buttonSs {
+    padding: 0.5em 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.userreportlistWrap > li ul li.evaluationbtnBox {
+    float: left;
+    width: 49%;
+    margin-right: 2%;
+    margin-bottom: 0;
+    margin-top: 0.3em;
+}
+
+.userreportlistWrap > li ul li.evaluationbtnBox:last-child {
+    margin-right: 0%;
+}
+
+.userreportlistWrap > li ul li.evaluationbtnBox a.buttonBasic.buttonSs,
+.userreportlistWrap > li ul li.evaluationbtnBox input.buttonBasic.buttonSs {
+    padding: 1em 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*********************************
+ファストメニュー
+*********************************/
+
+.cnterh2ttl {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.contttlWrap.cnterh2ttl h2 {
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2em;
+    font-size: 2rem;
+    border-left: none;
+    padding: 0 0 0.5em 0;
+    margin: 0;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    border-bottom: #d0d0d0 solid 2px;
+}
+
+.fastmenuWrap {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.fastmenuWrap > li {
+    float: left;
+    width: 31%;
+    margin-right: 3.5%;
+    box-sizing: border-box;
+    margin-bottom: 3.5%;
+
+    border-top: 3px solid #004081;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 15%);
+    border-radius: 0px;
+    text-decoration: none;
+    color: #333333;
+    padding: 1.5rem 1.5rem;
+    box-sizing: border-box;
+    /*border-radius: 5px;*/
+}
+
+.fastmenuWrap > li:nth-child(3n) {
+    margin-right: 0%
+}
+
+.fastmenuWrap > li:last-child {
+    margin-right: 0%
+}
+
+.fastmenuWrap > li > .fastmenuBoxlink {
+    display: block;
+    padding: 1rem 0 0.25rem;
+    color: #333333;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.fastmenuWrap > li > .fastmenuBoxlink:hover {
+    transition: .2s;
+    box-shadow: 0 0 15px 10px rgb(255 255 255) inset;
+    color: #1498a6;
+    background-color: #dbf0fe;
+    text-decoration: underline;
+}
+
+.fastmenuWrap .fastmenuTtl {
+    display: block;
+    text-align: center;
+    padding: 0rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.05rem;
+}
+
+.fastmenuWrap .fastmenuTtl > .fS-s {
+    font-size: 1.3rem;
+}
+
+.fastmenuWrap .fastmenuImage {
+    display: block;
+    width: 8rem;
+    margin: 0rem auto 0;
+    /*border: #f0f0f0 solid 1px;*/
+
+}
+
+.fastmenuWrap .fastmenuImage > img {
+    width: 100%;
+    height: auto;
+}
+
+.fastmenuWrap .fastmenuDoc {
+    display: block;
+    line-height: 1.6rem;
+}
+
+.fastmenuWrap .fastmenuDoc2 {
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 15%) inset;
+    background-color: #ffffff;
+    padding: 0.5em;
+    text-align: left;
+    border-radius: 6px;
+
+}
+
+.fastmenuWrap .fastmenuDoc2 > li {
+    margin-bottom: 0.25em;
+}
+
+.fastmenuWrap .fastmenuDoc2 > li:last-child {
+    margin-bottom: 0em;
+}
+
+.fastmenuWrap .fastmenuDoc2 > li > a {
+    display: block;
+}
+
+.fastmenuWrap .fastmenuDoc2 > li > a:hover {
+    background-color: #dbf0fe;
+}
+
+.fastmenuWrap .fastmenuDoc2 > li > a:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fastmenuWrap .fastmenuDoc2 > li > a:before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.alertIcon-notice {
+    display: inline-block;
+    padding: 0;
+    width: 1.75em;
+    background-color: #004081;
+    border-radius: 0.25em;
+    text-align: center;
+    color: #FFFFFF;
+    float: right;
+    line-height: 1.6;
+}
+
+.alertIcon-warning {
+    display: inline-block;
+    padding: 0;
+    width: 1.75em;
+    background-color: #d40b0b;
+    border-radius: 0.25em;
+    text-align: center;
+    color: #FFFFFF;
+    float: right;
+    line-height: 1.6;
+}
+
+.ex-alertIcon .alertIcon-notice,
+.ex-alertIcon .alertIcon-warning {
+    float: none;
+}
+
+.ex-alertIcon > li {
+    margin-bottom: 0.25em;
+}
+
+.ex-alertIcon > li:last-child {
+    margin-bottom: 0;
+}
+
+/**ファストメニュー2階層**********************/
+.contttlWrap.icon_h2ttl h2 {
+    position: relative;
+}
+
+.contttlWrap.icon_h2ttl h2::before {
+    content: "";
+    position: absolute;
+    top: -1.25em;
+    left: -4.25em;
+    width: 4em;
+    height: 4em;
+    /*background-image: url("/img/icon_menu_attendance.svg");*/
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.contttlWrap.icon_h2ttl.fmttlicon-attendance h2::before {
+    /*background-image: url("/img/icon_menu_attendance.svg");*/
+}
+
+.contttlWrap.icon_h2ttl.fmttlicon-support h2::before {
+    /*background-image: url("/img/icon_menu_support.svg");*/
+}
+
+.contttlWrap.icon_h2ttl.fmttlicon-data h2::before {
+    /*background-image: url("/img/icon_menu_data.svg");*/
+}
+
+.contttlWrap.icon_h2ttl.fmttlicon-user h2::before {
+    /*background-image: url("/img/icon_menu_user.svg");*/
+}
+
+.contttlWrap.icon_h2ttl.fmttlicon-staff h2::before {
+    /*background-image: url("/img/icon_menu_staff.svg");*/
+}
+
+.contttlWrap.icon_h2ttl.fmttlicon-office h2::before {
+    /*background-image: url("/img/icon_menu_office.svg");*/
+}
+
+.contttlWrap.icon_h2ttl h2 > span {
+    font-size: 0.6em;
+    letter-spacing: 0;
+}
+
+.fastmenu_childWrap {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.fastmenu_childWrap li {
+    float: left;
+    width: 31%;
+    margin-right: 3.5%;
+    box-sizing: border-box;
+    margin-bottom: 3.5%;
+}
+
+.fastmenu_childWrap > li:nth-child(3n) {
+    margin-right: 0%
+}
+
+.fastmenu_childWrap > li:last-child {
+    margin-right: 0%
+}
+
+.fastmenu_childWrap li a {
+    display: block;
+
+    border: 1px solid #004081;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 15%);
+    text-decoration: none;
+    color: #333333;
+    padding: 1.5rem 1.5rem;
+    box-sizing: border-box;
+    border-radius: 6px;
+    transition: .2s;
+}
+
+.fastmenu_childWrap li a:hover {
+    background-color: #dbf0fe;
+    transition: .2s;
+}
+
+/*********************************
+ファストメニュー fixbtn
+*********************************/
+.fixed-fastmenu-area {
+    position: fixed;
+    bottom: 40px;
+    right: 0%;
+    z-index: 1;
+}
+
+a.fastmenuBtn {
+    display: block;
+    position: relative;
+    padding: 0.5em 1em 0.5em 2.5em;
+    background-color: #ffffff;
+    line-height: 1.2;
+    border-radius: 1.2em 0 0 1.2em;
+    color: #303030;
+    text-decoration: none;
+    border-left: #e0e0e0 solid 1px;
+    border-top: #e0e0e0 solid 1px;
+    border-bottom: #e0e0e0 solid 1px;
+}
+
+a.fastmenuBtn::before {
+    position: absolute;
+    left: 1em;
+    content: "";
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    background-image: url("../../public/images/icons/iconsvg_blockmenu.svg");
+    background-size: 1.2em auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+a.fastmenuBtn:hover {
+    background-color: #defeff;
+    border-left: #00c4cc solid 1px;
+    border-top: #00c4cc solid 1px;
+    border-bottom: #00c4cc solid 1px;
+}
+
+/*********************************
+利用実績モーダル
+*********************************/
+.modal__content {
+    top: 5%;
+    transform: translate(-50%, 0%);
+}
+
+.modal.modalLs.wid1200 .modal__content {
+}
+
+.modal.modalLs.wid1200 .modal__content .modalInner {
+}
+
+.wid1200 .tableWrap {
+    margin-top: 0;
+}
+
+.contsubttlWrap.modalWinver {
+}
+
+.contsubttlWrap.modalWinver h3 {
+    letter-spacing: 0.05em;
+    font-weight: normal;
+    padding: 0 0 0.25em 0em;
+    margin-bottom: 0.5em;
+}
+
+.inputboxWrap {
+    border: #ffd362 solid 1px;
+    background-color: #fffae0;
+    border-radius: 6px;
+    padding: 0 10px 10px 10px;
+    /*min-height: 300px;********************************/
+}
+
+.inputboxWrap.inputCheckbox {
+    background-color: #fff5ef;
+}
+
+.inputboxWrapInner {
+    /*
+    background-color: #ffffff;
+    padding: 0.25em 0.5em;
+    */
+}
+
+.tableBasic.miniTtltable .inputboxWrap .formsetBox > dt {
+    width: 100%;
+    float: none;
+    border-left: none;
+    padding: 0 0 0.15em 0;
+}
+
+.tableBasic.miniTtltable .inputboxWrap .formsetBox > dd {
+    width: 100%;
+    float: none;
+}
+
+.inputboxTtl {
+}
+
+.checkCurrent {
+}
+
+.checkCurrent .formsetBox {
+    /*position: relative;*/
+}
+
+.checkCurrent .formsetBox:after {
+    /*content: "";
+    position: absolute;
+    top: 0.25em;
+    right: 1em;
+    background-color: #ff9900;
+    width: 1em;
+    height: 1.2em;
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);*/
+}
+
+.checkCurrent .formpostBox {
+    background-color: #fffae0;
+    border: #ffd362 solid 1px;
+}
+
+.formPack.rightWrong {
+    position: relative;
+    width: 1.5em;
+    height: 1.2em;
+}
+
+.formPack.rightWrong::before,
+.formPack.rightWrong::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    background-color: #e0e0e0;
+}
+
+.formPack.rightWrong::before {
+    transform: translate(0%, -50%) rotate(45deg);
+    height: 1em;
+}
+
+.formPack.rightWrong::after {
+    transform: translate(-200%, -40%) rotate(-45deg);
+    height: 0.6em;
+}
+
+.formPack.rightWrong.rwIcon-right::before,
+.formPack.rightWrong.rwIcon-right::after {
+    background-color: #00c4cc;
+}
+
+.formPack.rightWrong.rwIcon-wrong::before,
+.formPack.rightWrong.rwIcon-wrong::after {
+    background-color: #dd0000;
+}
+
+.formPack.rightWrong.rwIcon-wrong::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+    height: 1.2em;
+}
+
+.formPack.rightWrong.rwIcon-wrong::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    height: 1.2em;
+}
+
+.noticeTxtlist {
+    margin-top: 0.5em;
+}
+
+.noticeTxtlist > li {
+    line-height: 1.3;
+    text-indent: -1em;
+    margin-left: 1em;
+}
+
+.noticeTxtlist > li.noticeTxt-cau {
+    color: #dd0000;
+}
+
+.noticeTxtlist > li.noticeTxt-war {
+    color: #816000;
+}
+
+.tableWrap.borderLesstable .tableBasic tr.totalTimebox > th,
+.tableWrap.borderLesstable .tableBasic tr.totalTimebox > td {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.mrjButtonset .formPack {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.25em;
+}
+
+.contsubttlWrap.disWrap_t01.disttl h3,
+.contsubttlWrap.disWrap_t02.disttl h3 {
+    color: #dddddd;
+    border-bottom: #eeeeee dotted 1px;
+}
+
+.inputFormArea.warning-noticeBox {
+    margin-bottom: 20px;
+}
+
+.inputFormArea.warning-noticeBox .formsetBox > dt {
+    margin-top: 0;
+    color: #dd0000;
+}
+
+.inputFormArea.warning-noticeBox .formsetBox > dd {
+    margin-top: 0.25em;
+}
+
+.inputFormArea.warning-noticeBox .formsetBox > dd .formpostBox {
+    color: #dd0000;
+    border-left: #dd0000 solid 6px;
+    border-top: #cccccc solid 1px;
+    border-right: #cccccc solid 1px;
+    border-bottom: #cccccc solid 1px;
+    background-color: #ffffff;
+    padding: 0.75em 0.4em;
+}
+
+/*********************************************************************/
+.customCheck_test {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.customCheck_test input:disabled {
+}
+
+.customCheck_test input:disabled + span {
+    color: #cccccc;
+}
+
+/****ラジオとチェック********************************************
+labelにcustomLabelCheckを入れるとカスタム
+**************************************************************/
+
+label.customLabelCheck {
+    word-break: break-all;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    padding: 0.1em 0;
+}
+
+label.customLabelCheck input[type="checkbox"],
+label.customLabelCheck input[type="radio"] {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+label.customLabelCheck input + span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0.8em;
+    height: 0.8em;
+
+    border: #d7d7d7 solid 2px;
+    background-color: #ffffff;
+    padding: 0.25em;
+}
+
+/* RADIO BUTTON */
+label.customLabelCheck input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+label.customLabelCheck input[type="radio"] + span {
+}
+
+label.customLabelCheck input[type="radio"] + span::after {
+    position: absolute;
+    top: 0.75em;
+    left: 0.65em;
+    display: inline-block;
+    content: '';
+    box-sizing: border-box;
+    z-index: 1;
+
+    border-radius: 20px;
+    background-color: #cccccc;
+    width: 8px;
+    height: 8px;
+}
+
+/* label.customLabelCheck input[type="radio"]:checked+span::after {
+    background-color: #242423;
+} */
+
+/* CHECKBOX CUSTOM LABEL */
+label.customLabelCheck input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+label.customLabelCheck input[type="checkbox"] + span {
+}
+
+label.customLabelCheck input[type="checkbox"] + span::after {
+    position: absolute;
+    top: 0.5em;
+    left: 0.55em;
+    content: '';
+    box-sizing: border-box;
+    display: none;
+
+    z-index: 1;
+    margin: 0 0;
+    width: 0.45em;
+    height: 0.9em;
+
+    border: 4px solid #cccccc;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+label.customLabelCheck input[type="checkbox"]:checked + span::after {
+    border: 4px solid #202020;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: block;
+}
+
+/***/
+
+/* Button Submit */
+.btnCustomSubmit {
+    height: 2.5rem;
+    background-color: var(--medium-electric-blue);
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* Prefix label form */
+.formsetBox .labelTitle {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.2em;
+    padding-left: 1em;
+    letter-spacing: 0.05em;
+}
+
+.formsetBox .labelTitle::before {
+    content: '';
+    position: absolute;
+    top: 0.3em;
+    left: 0.1em;
+    display: inline-block;
+    box-sizing: border-box;
+    z-index: 1;
+    border-radius: 20px;
+    background-color: var(--vivid-cerulean);
+    width: 10px;
+    height: 10px;
+}
+
+/*******/
+
+/* label error */
+label.error {
+    color: var(--label-error);
+}
+
+/********/
+/* accordion css */
+.accordion {
+    position: relative;
+    width: 100.4%;
+    left: -0.4%;
+    top: -6%;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    background-color: #182987;
+    color: var(--white);
+    padding: 5px 0 5px 10px;
+    font-size: 16px;
+}
+
+/*******/
+
+/*****file box drag and drop*****/
+#image-display {
+    display: flex;
+    flex-direction: row;
+}
+
+.image-display {
+    display: flex;
+    flex-direction: row;
+}
+
+.fileBox {
+    padding: 1rem 0;
+    margin: 1rem 1rem;
+    position: relative;
+}
+
+.fileBox .removeFile {
+    position: absolute;
+    bottom: -0.5em;
+    right: -0.25em;
+    z-index: 99;
+    content: "x";
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--argent);
+    border-radius: 50%;
+    width: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btnSubmitGreen {
+    padding: 7px 3rem;
+    background-color: #00b050;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btnSubmitBlue {
+    padding: 7px 1.4rem;
+    background-color: var(--st-patrick-blue);
+    color: white !important;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    float: right;
+}
+
+/* type attribute form */
+.pickerJS:read-only {
+    background-color: var(--white);
+    border: 2px solid var(--argent);
+}
+
+input:read-only, textarea:read-only  {
+    background-color: #d9d9d9;
+    border: none;
+}
+
+input[type='checkbox'] {
+    width: 17px;
+    height: 30px;
+    border: red solid 2px;
+}
+
+.checkBasic > span {
+    margin-top: 0;
+    margin-left:3px;
+    float: right;
+    font-size: 1.1em;
+}
+
+
+.radioBasic{
+    span{
+    }
+
+    input[type='radio'] {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+/******/
+
+input.numberCharacter {
+    text-align: right !important;
+}
+
+input.textCharacter {
+    text-align: left;
+}
+
+input.dateCharacter {
+    text-align: center;
+    cursor: pointer;
+}
+
+/* auth: login, id_reminder and pass_reminder */
+.auth.content .contentInner {
+    margin-top: 10%;
+}
+
+.auth .tableWrap {
+    width: 500px;
+    min-width: 500px;
+}
+
+.auth .borderLesstable {
+    margin: auto;
+}
+
+.auth .tableWrap.borderLesstable .tableBasic tr > th,
+.auth .tableWrap.borderLesstable .tableBasic tr > td {
+    padding: 1rem 0.5rem;
+}
+
+.auth .formsetBox > dd {
+    width: 100%;
+}
+
+.auth .formsetBox > dt {
+    width: 100%;
+}
+
+/* .auth .formsetBox > dd .formPack, input {
+    width: 100%;
+} */
+
+.auth .formsetBox > dd .formPack,
+.auth .formsetBox > dd .formPack input
+ {
+    width: 100%;
+}
+
+.auth a:visited {
+    color: #2386db;
+}
+
+.auth .loginActions .btnCustomSubmit {
+    position: absolute;
+    bottom: 1em;
+    width: calc(100% - 16px);
+}
+
+.auth .loginActions .items-under {
+    position: relative;
+    height: 100%;
+}
+
+.auth .loginActions .item-column-down {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth .reminder .btnCustomSubmit {
+    width: 50%;
+    float: right;
+}
+
+/* .d-flex input{
+    width: auto;
+} */
+
+.mr-25 {
+    margin-right: .25rem;
+}
+
+/* from estimate */
+
+    .tableWrap.borderLesstable {
+        padding: 20px;
+    }
+
+    .tableWrap.bordertable {
+        padding: 30px 30px;
+    }
+
+    .pagettlWrap {
+        margin-top: 2%;
+    }
+
+    .tableWrap.borderLesstable.inputFormArea .tableBasic > tbody > tr > td {
+        display: inline-block;
+        margin-right: 2em;
+        padding: 0 0 10px 0;
+    }
+
+    .inputFormArea .formsetBox > dd {
+        margin-top: 0.2em;
+    }
+
+    .tableWrap.borderLesstable.inputFormArea .tableBasic .picker__table tr > th,
+    .tableWrap.borderLesstable.inputFormArea .tableBasic .picker__table tr > td {
+        padding: 0.2rem;
+    }
+
+    .pagettlNomalWrap {
+        padding-top: 2rem;
+    }
+
+    .btnSubmitCustom img {
+        width: 30px;
+        padding-top: 3px;
+    }
+
+    .calendar-plugin input {
+        width: 10rem;
+    }
+
+    select:focus, input:focus, textarea:focus {
+        border: #00c4cc solid 2px;
+    }
+
+    .d-none {
+        display: none !important;
+    }
+
+    .d-block {
+        display: block !important;
+    }
+
+    .d-inline-block {
+        display: inline-block !important;
+    }
+
+    input:read-only {
+        background-color: #d9d9d9;
+        border: 2px solid var(--argent);
+    }
+
+    .modalInner .tableWrap {
+        background: #f0f0f0;
+        border-color: #f0f0f0;
+    }
+
+    .modalCloseBtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: red;
+        border: red;
+        color: white;
+        font-size: 20px;
+        padding: 2px 10px;
+        cursor: pointer;
+    }
+
+    .margin-top {
+        margin-top: 1.25rem;
+    }
+
+    .flex-center {
+        display: flex;
+        justify-content: center;
+    }
+
+    .buttonlistWrap {
+        max-width: 600px;
+    }
+    
+    .buttonlistWrap .buttonBasic {
+        width: 300px !important;
+    }
+    
+    .buttonlistWrap .btn-reset {
+        opacity: 0.7;
+    }
+    
+    .btnSubmitCustom {
+        background-color: var(--st-patrick-blue);
+        display: flex;
+        justify-content: center;
+        width: 60px;
+        height: 37px;
+        border: none;
+        color: var(--white);
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
+    .btnSubmitCustom__disable {
+        background-color: var(--st-patrick-blue);
+        display: flex;
+        opacity: 0.6;
+        justify-content: center;
+        width: 60px;
+        height: 37px;
+        border: none;
+        color: var(--white);
+        border-radius: 6px;
+    }
+
+    .checkBasic > span {
+        margin-top: 5px;
+        float: right;
+    }
+    
+    .headerList {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    
+    .headerList li:nth-child(2) {
+        margin-bottom: 8px
+    }
+    
+    .headerList li:nth-child(2) input {
+        width: 300px;
+        padding: 8px;
+    }
+    
+    a.buttonBasic {
+        padding: 0.5em 0.65em 0.5em 0.75em;
+    }
+
+    .inputFormArea .formsetBox > dd {
+        margin-top: 0.2em;
+    }
+
+    
+.tableWrap.borderLesstable {
+    padding: 20px;
+}
+
+.tableWrap.bordertable {
+    padding: 8px 30px;
+}
+
+.pagettlWrap {
+    margin-top: 2%;
+}
+
+.tableWrap.borderLesstable.inputFormArea .tableBasic > tbody > tr > td {
+    display: inline-block;
+    margin-right: 2em;
+    padding: 0 0 10px 0;
+}
+
+.inputFormArea .formsetBox > dd {
+    margin-top: 0.2em;
+}
+
+.tableWrap.borderLesstable.inputFormArea .tableBasic .picker__table tr > th, .tableWrap.borderLesstable.inputFormArea .tableBasic .picker__table tr > td {
+    padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.btnSubmitCustom img {
+    width: 30px;
+    padding-top: 3px;
+}
+
+.btnSubmitCustom {
+    background-color: var(--st-patrick-blue);
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 37px;
+    border: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+
+.calendar-plugin input {
+    width: 10rem;
+}
+
+.dropFiles {
+    height: 8em;
+    border: 2px solid var(--bright-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.buttonlistWrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fileLoad a {
+    margin: 1rem 1rem;
+}
+
+.fileLoad a:first-child {
+    margin-left: 0;
+}
+
+.boxAddElement {
+    background-color: #00a907;
+}
+
+.wrapBtnAdd {
+    width: 100%;
+    list-style-type: none;
+    display: flex !important;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.tableAddElement {
+    position: relative;
+    background-color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+.tableAddElement .remove-btn{
+    position: absolute;
+    color: var(--white);
+    text-align: center;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: #c00000;
+    top: 20px;
+    right: 20px;
+    border:none;
+}
+
+/* .tableAddElement:after {
+    position: absolute;
+    content: 'x';
+    color: var(--white);
+    text-align: center;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: #c00000;
+    top: 20px;
+    right: 20px;
+} */
+
+.tableAddElement .dropFiles {
+    border: 1px solid;
+    width: 97.2%;
+}
+
+.tableAddElement dl {
+    padding: 10px 20px;
+}
+
+    
+/* from search-modal.css */
+    .clear {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .clear-button {
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #0068ae;
+        border: #0077c7 solid 1px;
+        color: white;
+    }
+
+    .clear-button:hover {
+        background-color: #2b76a7;
+    }
+
+    .modal_fix_width {
+        position: fixed;
+        width: 30%!important;
+    }
+
+    
+.mt-1{
+    margin-top: 1rem;
+}
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+.mt-3{
+    margin-top: 3rem;
+}
+.mt-4{
+    margin-top: 4rem;
+}
+.mt-5{
+    margin-top: 5rem;
+}
+
+/* search & clear buttons */
+.sc {
+    button, a {
+        min-width: 200px;
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute-right {
+    position: absolute;
+    right: 0;
+}
+
+.btnSubmitCustom {
+    &--size {
+        width: auto !important;
+        height: auto !important;
+        padding: 5px 10px 5px 10px;
+        cursor: pointer;
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.btn {
+    color: var(--white) !important;
+    display: inline-block;
+    font-weight: 400;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-blue{
+    background-color: var(--header-title-box-color);
+}
+
+.btn-green{
+    background-color: #05c031;
+    color: #ffff !important; 
+}
+
+.mw-100{
+    width: 100%;
+}
+
+.text-end{
+    text-align:end;
+}
+
+.text-start{
+    text-align:start;
+}
+.align-middle,
+.align-middle tr :is(td, th) {
+    vertical-align: middle !important;
+}
+.align-top tr :is(td, th) {
+    vertical-align: top !important;
+}
+.input-error {
+    border: 2px solid red !important;
+}
+.error {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+.error-border {
+    border: 2px solid red;
+}

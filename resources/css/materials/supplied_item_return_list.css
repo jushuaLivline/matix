@@ -1,0 +1,30 @@
+.calendar-plugin input {
+    text-align: left;
+    width: 7.5rem !important;
+}
+
+.radioBasic input {
+    width: auto !important;
+}
+
+.tableWrap.borderLesstable {
+    padding: 20px;
+}
+
+.tableWrap .resultByDepartment .tableBasic tr>th,
+.tableWrap .resultByDepartment .tableBasic tr>td,
+.tableWrap .resultByLine .tableBasic tr>th,
+.tableWrap .resultByLine .tableBasic tr>td,
+.tableWrap .resultByPartNumber .tableBasic tr>th,
+.tableWrap .resultByPartNumber .tableBasic tr>td {
+    border-left: #cccccc solid 1px;
+    border-right: #cccccc solid 1px;
+}
+.total-row {
+    background: #D9E1F2;
+}
+.remove-cell {
+    border-left: none !important;
+    border-bottom: none !important;
+    background: #fff !important;
+}

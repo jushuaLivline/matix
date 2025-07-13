@@ -1,0 +1,76 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class TemporaryUnofficialNotice extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        "product_id",
+        "acceptance",
+        "delivery_destination_code",
+        "year_and_month",
+        "day_1",
+        "day_2",
+        "day_3",
+        "day_4",
+        "day_5",
+        "day_6",
+        "day_7",
+        "day_8",
+        "day_9",
+        "day_10",
+        "day_11",
+        "day_12",
+        "day_13",
+        "day_14",
+        "day_15",
+        "day_16",
+        "day_17",
+        "day_18",
+        "day_19",
+        "day_20",
+        "day_21",
+        "day_22",
+        "day_23",
+        "day_24",
+        "day_25",
+        "day_26",
+        "day_27",
+        "day_28",
+        "day_29",
+        "day_30",
+        "day_31",
+        "current_month",
+        "next_month",
+        "two_months_later",
+        "instruction_class",
+        "direct_shipping_destination",
+        "uniform_number",
+        "cycle",
+        "number_of_accomodated",
+        "aisin_factory",
+        "responsible_person",
+        "minimum_delivery_unit",
+        "number_per_day",
+        "number_of_cards",
+        "kanban_number",
+        "standard_stock",
+        "sp_tp_classification",
+        "manufactorer_factory",
+        "manufactorer_factory_destination",
+        "data_partition",
+        "current_month_order_rate_factored_number",
+        "color_mode",
+        "customer_part_number",
+        "customer",
+        "design_change_code",
+        "input_category",
+        "creator",
+        "input_id",
+    ];
+}

@@ -1,0 +1,40 @@
+.row {
+    display: flex;
+}
+
+.col-md-6 {
+    width: 50%;
+}
+
+.text-right {
+    text-align: right;
+}
+
+table input[type="text"] {
+    width: 100%;
+    text-align: center !important;
+}
+
+table td {
+    border: 1px solid #d9D9D9;
+}
+
+.h30 {
+    height: 30px;
+}
+
+.bg-gray {
+    background-color: #EBECEE;
+}
+
+.tableWrap .tableBasic {
+    border-top: 0;
+}
+
+.success-message {
+    color: #05c031;
+}
+
+.error-message {
+    color:red;
+}

@@ -1,0 +1,82 @@
+.buttonDetail {
+    margin: 2em auto 0;
+    float: right;
+}
+
+.buttonlistWrap {
+    width: 0px;
+}
+
+.buttonDelete {
+    background-color: #C55A11;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 4rem;
+}
+
+.buttonlistWrap .buttonBasic {
+    width: 250px !important;
+}
+
+.btnSubmitCustom {
+    background-color: var(--st-patrick-blue);
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 37px;
+    border: none;
+    color: var(--white);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.headerList {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.headerList li:nth-child(2) {
+    margin-bottom: 8px
+}
+
+.headerList li:nth-child(2) input {
+    width: 300px;
+    padding: 8px;
+}
+
+a.buttonBasic {
+    padding: 0.5em 0.65em 0.5em 0.75em;
+}
+
+.formsetBox > dd .formPack.fixedWidth.fpfw25p {
+    max-width: 40%;
+}
+
+.formsetBox > dd .formPack.fixedWidth.fpfw50p {
+    max-width: 40%;
+}
+
+.tableWrap.bordertable {
+    padding: 30px 30% 30px 30px;
+}
+
+.detail-number-input {
+    width: 100%;
+    height: 32px;
+}
+
+.list-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.list-table > tbody > tr > th,
+.list-table > tbody > tr > td {
+    border:1px solid #ccc;
+}
+
+.bg-white{
+    background-color: #fff;
+}

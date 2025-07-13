@@ -1,0 +1,90 @@
+.tableWrap.borderLesstable {
+    padding: 20px;
+}
+
+.tableWrap.bordertable {
+    padding: 30px 30px;
+}
+
+.pagettlWrap {
+    margin-top: 2%;
+}
+
+.tableWrap.borderLesstable.inputFormArea .tableBasic > tbody > tr > td {
+    display: inline-block;
+    margin-right: 2em;
+    padding: 0 0 10px 0;
+}
+
+.inputFormArea .formsetBox > dd {
+    margin-top: 0.2em;
+}
+
+.tableWrap.borderLesstable.inputFormArea .tableBasic .picker__table tr > th,
+.tableWrap.borderLesstable.inputFormArea .tableBasic .picker__table tr > td {
+    padding: 0.2rem;
+}
+
+.btnSubmitCustom img {
+    width: 30px;
+    padding-top: 3px;
+}
+
+.calendar-plugin input {
+    width: 10rem;
+}
+
+select:focus, input:focus, textarea:focus {
+    border: #00c4cc solid 2px;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+.d-inline-flex {
+    display: inline-flex !important;
+    flex-direction: column;
+    border: 1px solid red
+}
+.d-flex-inline {
+    display: inline-flex !important;
+}
+
+input:read-only {
+    background-color: #d9d9d9;
+    border: 2px solid var(--argent);
+}
+
+.modalInner .tableWrap {
+    background: #f0f0f0;
+    border-color: #f0f0f0;
+}
+
+.modalCloseBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: red;
+    border: red;
+    color: white;
+    font-size: 20px;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+.margin-top {
+    margin-top: 1.25rem;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,28 @@
+.btnSubmitCustom img {
+    width: 30px;
+    padding-top: 3px;
+}
+
+.btnSubmitCustom {
+    background-color: var(--st-patrick-blue);
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 37px;
+    border: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+
+table td {
+    vertical-align: middle !important;
+}
+
+table td:nth-child(1),
+table td:nth-child(2),
+table td:nth-child(6),
+table td:nth-child(9),
+table td:nth-child(10),
+table td:nth-child(11) {
+    text-align: right;
+}

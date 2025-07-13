@@ -1,0 +1,69 @@
+.tableWrap.bordertable {
+    padding: 30px 30px;
+}
+
+.pagettlWrap {
+    margin-top: 2%;
+}
+
+.tableWrap.borderLesstable.inputFormArea .tableBasic > tbody > tr > td {
+    display: inline-block;
+    margin-right: 2em;
+    padding: 0 0 10px 0;
+}
+
+.inputFormArea .formsetBox > dd {
+    margin-top: 0.2em;
+}
+
+.tableWrap.borderLesstable.inputFormArea .tableBasic .picker__table tr > th, .tableWrap.borderLesstable.inputFormArea .tableBasic .picker__table tr > td {
+    padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.pagettlNomalWrap {
+    padding-top: 2rem;
+}
+
+dd {
+    margin-inline-start: 40px;
+}
+
+.nameFile a {
+    margin: 0 1em;
+}
+
+.nameFile a:first-child {
+    margin: 0 1em 0 0;
+}
+
+.sectionBox1 {
+    display: flex;
+}
+
+.sectionBox1 p {
+    width: 200px;
+    margin-right: 60px;
+}
+
+.sectionBox1 p span:first-child{
+    margin-right: 30px;
+    font-weight: 600;
+}
+
+.sectionBox2 {
+    margin-top: 3%;
+}
+
+.sectionBox2 dl:nth-child(2) {
+    margin-top: 1%;
+}
+
+.btnSubmitBlue {
+    padding: 7px 1.4rem;
+    background-color: var(--st-patrick-blue);
+    color: white !important;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    float: right;
+}

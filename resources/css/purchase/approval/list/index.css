@@ -1,0 +1,45 @@
+.calendar-plugin input {
+    text-align: left;
+    width: 6rem !important;
+}
+
+.btnExport {
+    cursor: pointer;
+}
+
+#flash-message {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    font-size: 18px;
+    color: #0d9c38;
+    margin-bottom: 10px;
+}
+
+.btn-disabled {
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+.pagerArea {
+    width: 75%;
+}
+
+.w-100px {
+    width: 100px;
+}
+
+.w-200px {
+    width: 200px;
+}
+
+.span-dash {
+    font-size:24px;
+    padding:5px 10px;
+}
+
+#list-table tr td {
+    vertical-align: middle;
+}

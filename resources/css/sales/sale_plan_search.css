@@ -1,0 +1,25 @@
+.radioSale {
+    margin-right: 1.5rem !important;
+}
+
+input[type="radio"] {
+    width: auto !important;
+}
+
+.tableBasicPlan {
+    width: 100% !important;
+    margin: 30px !important;
+}
+
+.list-table > tbody > tr > th,
+.list-table > tbody > tr > td {
+    border:1px solid #ccc;
+}
+
+.width-auto {
+    width: auto !important;
+}
+
+.pagettlWrap {
+    margin-bottom: 0 !important;
+}

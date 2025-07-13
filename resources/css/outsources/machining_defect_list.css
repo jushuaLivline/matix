@@ -1,0 +1,26 @@
+table td {
+    vertical-align: middle !important;
+}
+
+/*Number character*/
+table td:nth-child(3),
+table td:nth-child(5),
+table td:nth-child(6),
+table td:nth-child(7),
+table td:nth-child(8)
+{
+    text-align: right;
+}
+
+/*text character*/
+table td:nth-child(2),
+table td:nth-child(4)
+{
+    text-align: left;
+}
+
+/*date character*/
+table td:nth-child(1)
+{
+    text-align: center;
+}

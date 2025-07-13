@@ -1,0 +1,9 @@
+table td {
+    vertical-align: middle !important;
+}
+
+/*Number character*/
+table td:nth-child(4)
+{
+    text-align: right;
+}
